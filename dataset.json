@@ -1,0 +1,2147 @@
+{
+  "entities": {},
+  "intents": {
+    "Ask_Time": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u099f\u09be\u0987\u09ae \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09ae\u09df \u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09df\u099f\u09be \u09ac\u09be\u099c\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u0995\u09c7 \u09b8\u09ae\u09df \u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09a4\u099f\u09be \u09ac\u09be\u099c\u09c7 \u098f\u0996\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0996\u09a8 \u09b8\u09ae\u09df \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0996\u09a8 \u09b0\u09be\u09a4 \u09a8\u09be \u09a6\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0996\u09a8 \u0995\u09df\u099f\u09be \u09ac\u09be\u099c\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7\u09b0 \u09a4\u09be\u09b0\u09bf\u0996 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09be\u09b0\u09bf\u0996 \u0993 \u09b8\u09ae\u09df \u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a1\u09c7\u099f \u0993 \u099f\u09be\u0987\u09ae \u0995\u09a4"
+            }
+          ]
+        }
+      ]
+    },
+    "Bank_and_ATM_Location": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u09b2\u09cb\u0995\u09c7\u09b6\u09a8 \u0995\u09cb\u09a5\u09be\u09df"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b2\u09cb\u0995\u09c7\u09b6\u09a8 \u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b2\u09cb\u0995\u09c7\u09b6\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u09a0\u09bf\u0995\u09be\u09a8\u09be \u0995\u09cb\u09a5\u09be\u09df"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u09b9\u09c7\u09a1 \u0985\u09ab\u09bf\u09b8 \u0995\u09cb\u09a5\u09be\u09df"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09c7\u09a1 \u0985\u09ab\u09bf\u09b8 \u09b2\u09cb\u0995\u09c7\u09b6\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09cb\u09a5\u09be\u09df \u0995\u09cb\u09a5\u09be\u09df \u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u09b2\u09cb\u0995\u09c7\u09b6\u09a8 \u0986\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09aa\u09a8\u09be\u09a6\u09c7\u09b0 \u09a0\u09bf\u0995\u09be\u09a8\u09be \u0995\u09cb\u09a5\u09be\u09df"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09cb\u09a5\u09be\u09df \u0995\u09cb\u09a5\u09be\u09df \u0986\u09aa\u09a8\u09be\u09a6\u09c7\u09b0 \u09b2\u09cb\u0995\u09c7\u09b6\u09a8 \u0986\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0997\u09c1\u09b2\u09b6\u09be\u09a8\u09c7 \u0995\u09bf \u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u09b6\u09be\u0996\u09be \u0986\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u09b6\u09be\u0996\u09be \u0995\u09cb\u09a5\u09be\u09df \u0986\u099b\u09c7"
+            }
+          ]
+        }
+      ]
+    },
+    "Card_Activation": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u0987\u099f \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u09b6\u09a8 \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u0987\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u099a\u09be\u09b2\u09c1 \u0995\u09b0\u09a4\u09c7 \u09ab\u09cb\u09a8 \u0995\u09b0\u09c7\u099b\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u0985\u09cd\u09af\u09be\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u099f \u0995\u09b0\u09ac\u09cb"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09b8\u0995\u09cd\u09b0\u09bf\u09df \u0995\u09b0\u09ac\u09cb \u09ac\u09b2\u09a4\u09c7 \u09b9\u09ac\u09c7 \u09a8\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1\u099f\u09bf \u0985\u09cd\u09af\u09be\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u099f \u0995\u09b0\u09ac\u09cb"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u0985\u09cd\u09af\u09be\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u099f \u0995\u09b0\u09ac\u09cb"
+            }
+          ]
+        }
+      ]
+    },
+    "Card_Close": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09a1\u09bf\u098f\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u0987\u099f \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u0995\u09c7\u09a8\u09cd\u09b8\u09c7\u09b2 \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09be\u09b0\u09cd\u09a1 \u09ac\u09be\u09a6 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09df"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u0986\u09ae\u09be\u09b0 \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09be\u09b0\u09cd\u09a1 \u09ac\u09be\u09a6 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09df"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09ac\u09be\u09a4\u09bf\u09b2\u0995\u09b0\u09a3"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u0995\u09cd\u09b2\u09cb\u099c \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09be\u09b0\u09cd\u09a1 \u0995\u09cd\u09b2\u09cb\u099c \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09ac\u09a8\u09cd\u09a7 \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09a1\u09bf\u098f\u0995\u09cd\u099f\u09bf\u09ad\u09c7\u0987\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09ac\u09a8\u09cd\u09a7 \u0995\u09b0\u09c7 \u09a6\u09be\u0993"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1\u099f\u09be \u09ac\u09be\u09a4\u09bf\u09b2 \u0995\u09b0\u09ac \u09a4\u09cb"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09ac\u09be \u09a4\u09bf\u09a8 \u0995\u09b0\u09ac"
+            }
+          ]
+        }
+      ]
+    },
+    "Credit_Card_Limit": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u09b2\u09bf\u09ae\u09bf\u099f \u0995\u09a4 \u099f\u09be\u0995\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u09b2\u09bf\u09ae\u09bf\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u09b2\u09bf\u09ae\u09bf\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09be\u09b0\u09cd\u09a1 \u09b2\u09bf\u09ae\u09bf\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09b2\u09bf\u09ae\u09bf\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09b0\u09cd\u09ac\u09cb\u099a\u09cd\u099a \u0995\u09a4 \u099f\u09be\u0995\u09be \u0986\u09ae\u09be\u09b0 \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u09b2\u09bf\u09ae\u09bf\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09b0\u09cd\u09ac\u09cb\u099a\u09cd\u099a \u0995\u09be\u09b0\u09cd\u09a1 \u09b2\u09bf\u09ae\u09bf\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u09b2\u09bf\u09ae\u09bf\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09b2\u09bf\u09ae\u09bf\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b2\u09bf\u09ae\u09bf\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u099f\u09cb\u099f\u09be\u09b2 \u09b2\u09bf\u09ae\u09bf\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0985\u09ad\u09be\u09df\u09b2\u09be\u09ac\u09b2\u09c7 \u09b2\u09bf\u09ae\u09bf\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0985\u09ad\u09be\u09df\u09b2\u09be\u09ac\u09b2\u09c7 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0985\u09ad\u09be\u09df\u09b2\u09be\u09ac\u09b2\u09c7 \u09b2\u09bf\u09ae\u09bf\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u0989\u099f\u09b8\u09cd\u099f\u09c7\u09a8\u09cd\u09a1\u0982 \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u09a1\u09bf\u0989 \u0995\u09a4 \u099f\u09be\u0995\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09a1\u09bf\u0989 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09ac\u09bf\u09b2 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1\u09c7\u09b0 \u09ac\u09bf\u09b2 \u099c\u09be\u09a8\u09a4\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u0986\u0989\u099f\u09b8\u09cd\u099f\u09c7\u09a8\u09cd\u09a1\u0982 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u098f\u09ad\u09c7\u0987\u09b2\u09c7\u09ac\u09b2 \u098f\u09ae\u09be\u0989\u09a8\u09cd\u099f \u0995\u09a4 \u099f\u09be\u0995\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u098f\u09b0 \u098f\u09ad\u09c7\u0987\u09b2\u09c7\u09ac\u09b2 \u098f\u09ae\u09be\u0989\u09a8\u09cd\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09be\u09b0\u09cd\u09a1 \u098f \u0995\u09a4 \u099f\u09be\u0995\u09be \u0996\u09b0\u099a \u09b9\u09df\u09c7\u099b\u09c7"
+            }
+          ]
+        }
+      ]
+    },
+    "EMI_Query": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u0987\u09a8\u09ab\u09b0\u09ae\u09c7\u09b6\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u09a4\u09a5\u09cd\u09af"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u09b9\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09b8\u09c1\u09a6\u09c7\u09b0 \u09b9\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u09b8\u09c1\u09a6\u09c7\u09b0 \u09b9\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09aa\u09cd\u09b0\u09a4\u09bf \u09ae\u09be\u09b8\u09c7\u09b0 \u09b8\u09c1\u09a6"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09ae\u09be\u09b8\u09c7\u09b0 \u0987\u09a8\u09b8\u099f\u09b2\u09ae\u09c7\u09a8\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987 \u0987\u09a8\u09b8\u099f\u09b2\u09ae\u09c7\u09a8\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u098f\u09ae\u0986\u0987"
+            }
+          ]
+        }
+      ]
+    },
+    "E_Commerce_Request": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0987\u0995\u09ae\u09be\u09b0\u09b8 \u098f\u09a8\u09be\u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0995\u09ae\u09be\u09b0\u09b8 \u09b0\u09bf\u0995\u09c1\u09df\u09c7\u09b8\u09cd\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0995\u09ae\u09be\u09b0\u09b8 \u09b0\u09bf\u0995\u09c1\u09df\u09c7\u09b8\u09cd\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0995\u09ae\u09be\u09b0\u09b8 \u098f\u09a8\u09be\u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0995\u09ae\u09be\u09b0\u09b8 \u098f\u09a8\u09be\u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0995\u09ae\u09be\u09b0\u09b8 \u09b8\u09be\u09b0\u09cd\u09ad\u09bf\u09b8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0995\u09ae\u09be\u09b0\u09b8 \u09b8\u09be\u09b0\u09cd\u09ad\u09bf\u09b8 \u098f\u09a8\u09be\u09ac\u09b2"
+            }
+          ]
+        }
+      ]
+    },
+    "Exchange_rate": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7\u09b0 \u098f\u0995\u09cd\u09b8\u099a\u09c7\u099e\u09cd\u099c \u09b0\u09c7\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u09cd\u09b8\u099a\u09c7\u099e\u09cd\u099c \u09b0\u09c7\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0989 \u098f\u09b8 \u09a1\u09bf \u09b0\u09c7\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u099f\u09be\u0995\u09be\u09b0 \u09ac\u09bf\u09aa\u09cd\u09b0\u09bf\u09a4\u09c7 \u09a1\u09b2\u09be\u09b0 \u09b0\u09c7\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a1\u09b2\u09be\u09b0 \u09b0\u09c7\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995 \u09a1\u09b2\u09be\u09b0 \u0995\u09a4 \u099f\u09be\u0995\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0987\u099f\u09be \u099a\u09c7\u099e\u09cd\u099c \u0995\u09a4"
+            }
+          ]
+        }
+      ]
+    },
+    "affirm": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0985\u09ac\u09b6\u09cd\u09af\u0987"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09be\u0981"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09be\u0981 \u09a0\u09bf\u0995 \u0986\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u099c\u09c0 \u09a0\u09bf\u0995 \u0986\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09be\u0981 \u0995\u09b0\u09a4\u09c7 \u09a5\u09be\u0995"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09be\u0981 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u0987"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09cd\u09af\u09be\u0981"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b0\u09be\u099c\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a0\u09bf\u0995 \u0986\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a8\u09bf\u09b6\u09cd\u099a\u09df"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09a0\u09bf\u0995"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0985\u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0993\u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u09df\u09c7\u09b8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09aa\u09be\u09b0\u09ab\u09c7\u0995\u09cd\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09c1\u09ae"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u099a\u09be\u09b2\u09bf\u09df\u09c7 \u09af\u09be\u0993\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0\u09a4\u09c7 \u09a5\u09be\u0995"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u099c\u09bf \u09b9\u09cd\u09af\u09be\u0981 \u09a0\u09bf\u0995 \u0986\u099b\u09c7"
+            }
+          ]
+        }
+      ]
+    },
+    "agent_transfer": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "i want to talk to human."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "connect me to an agent"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "transfer to human/agent"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "wants to talk to a human"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "need human agent help"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "agent transfer"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "human transfer"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "need agent help"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Hand over to an agent"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u09ae\u09be\u09a8\u09c1\u09b7\u09c7\u09b0 \u09b8\u09be\u09a5\u09c7 \u0995\u09a5\u09be \u09ac\u09b2\u09a4\u09c7 \u099a\u09be\u099a\u09cd\u099b\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u0995\u09c7 \u098f\u0995\u099c\u09a8 \u098f\u099c\u09c7\u09a8\u09cd\u099f \u098f\u09b0 \u09b8\u09be\u09a5\u09c7 \u0995\u09a5\u09be \u09a6\u09be\u0993"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u0995\u09c7 \u098f\u0995\u099c\u09a8 \u098f\u099c\u09c7\u09a8\u09cd\u099f \u098f\u09b0 \u09b8\u09be\u09a5\u09c7 \u0995\u09be\u09a8\u09c7\u09a8\u09cd\u099f \u0995\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u098f\u0995\u099c\u09a8 \u09b2\u09be\u0987\u09ad \u098f\u099c\u09c7\u09a8\u09cd\u099f \u098f\u09b0 \u09b8\u09be\u09a5\u09c7 \u0995\u09a5\u09be \u09ac\u09b2\u09a4\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b2\u09be\u0987\u09ad \u098f\u099c\u09c7\u09a8\u09cd\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u099c\u09a8 \u09ae\u09be\u09a8\u09c1\u09b7\u09c7\u09b0 \u09b8\u09be\u09a5\u09c7 \u0995\u09a5\u09be"
+            }
+          ]
+        }
+      ]
+    },
+    "bKash_transfer": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09bf\u0995\u09be\u09b6 \u099f\u09cd\u09b0\u09be\u09a8\u09cd\u09b8\u09ab\u09be\u09b0 \u0995\u09b0\u09ac\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09bf\u0995\u09be\u09b6 \u099f\u09cd\u09b0\u09be\u09a8\u09cd\u09b8\u09ab\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09bf\u0995\u09be\u09b6\u09c7 \u099f\u09be\u0995\u09be \u09aa\u09be\u09a0\u09be\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09bf\u0995\u09be\u09b6 \u09aa\u09c7\u09ae\u09c7\u09a8\u09cd\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09bf\u0995\u09be\u09b6 \u09aa\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09bf\u0995\u09be\u09b6 \u09aa\u09c7 \u0995\u09b0\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09bf\u0995\u09be\u09b6"
+            }
+          ]
+        }
+      ]
+    },
+    "check_balance": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f\u09c7 \u0995\u09a4 \u099f\u09be\u0995\u09be \u0986\u099b\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u0995\u09bf?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u099a\u09c7\u0995 \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u09a6\u09c7\u0996\u09be\u0993"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u098f\u0995\u09be\u0989\u09a8\u09cd\u099f \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u09be\u0989\u09a8\u09cd\u099f\u09c7 \u0995\u09a4 \u099f\u09be\u0995\u09be \u0986\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u09be\u0989\u09a8\u09cd\u099f \u09ac\u09cd\u09af\u09be\u09b2\u09c7\u09a8\u09cd\u09b8 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09a4 \u099f\u09be\u0995\u09be  \u098f\u0995\u09be\u0989\u09a8\u09cd\u099f\u09c7"
+            }
+          ]
+        }
+      ]
+    },
+    "check_human": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u0995\u09c7 \u09a0\u09bf\u0995 \u099a\u09bf\u09a8\u09b2\u09be\u09ae \u09a8\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u0995\u09be\u09b0 \u09b8\u09be\u09a5\u09c7 \u0995\u09a5\u09be \u09ac\u09b2\u099b\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09b0 \u09aa\u09b0\u09bf\u099a\u09df \u0995\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09b0 \u09a8\u09be\u09ae \u0995\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09be\u09ae \u0995\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a8\u09be\u09ae \u0995\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09b0\u09cb\u09ac\u099f?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09b8\u09a4\u09cd\u09af\u09bf \u0986\u099b?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u09a6\u09c7\u0996\u09a4\u09c7 \u0995\u09c7\u09ae\u09a8?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09b0 \u0995\u09bf \u0995\u09cb\u09a8 \u099b\u09ac\u09bf \u0986\u099b\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09ae\u09be\u09a8\u09c1\u09b7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u0995\u09c3\u09a4\u09cd\u09b0\u09bf\u09ae \u09ac\u09c1\u09a6\u09cd\u09a7\u09bf\u09ae\u09a4\u09cd\u09a4\u09be \u09b8\u09ae\u09cd\u09aa\u09a8\u09cd\u09a8?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09b0 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09c7 \u0986\u09ae\u09be\u0995\u09c7 \u0995\u09bf\u099b\u09c1 \u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09c7 \u09a4\u09cb\u09ae\u09be\u0995\u09c7 \u09a4\u09c8\u09b0\u09c0 \u0995\u09b0\u09c7\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u0995\u09c7 \u0995\u09c7 \u09b8\u09c3\u09b7\u09cd\u099f\u09bf \u0995\u09b0\u09c7\u099b\u09c7"
+            }
+          ]
+        }
+      ]
+    },
+    "deny": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u09a8\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u099a\u09be\u0987 \u09a8\u09be\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09be\u09a4\u09bf\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u0996\u09a8\u0993 \u09a8\u09be\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b2\u09be\u0997\u09ac\u09c7 \u09a8\u09be\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6, \u09b2\u09be\u0997\u09ac\u09c7 \u09a8\u09be\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09b0\u0995\u09be\u09b0 \u09a8\u09be\u0987"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09a4\u09cd\u09af\u09bf \u09a8\u09be\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ae\u09bf\u09a5\u09cd\u09af\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098b\u09a3\u09be\u09a4\u09cd\u09ae\u0995"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a0\u09bf\u0995 \u09a8\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a8\u09be \u099a\u09be\u09df \u09a8\u09be\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a8\u09be \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7 \u09a8\u09be"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0985\u09ab \u0995\u09b0\u09c7 \u09a6\u09be\u0993"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09be\u09a6 \u09a6\u09be\u0993"
+            }
+          ]
+        }
+      ]
+    },
+    "explain": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u09ae\u09cb\u09ac\u09be\u0987\u09b2 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 \u0995\u09c7\u09a8 \u09a6\u09b0\u0995\u09be\u09b0?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09be\u09b0\u09cd\u09a1 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 \u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u0995\u09be\u099b\u09c7 \u09a8\u09bf\u09b0\u09be\u09aa\u09a6 \u09a5\u09be\u0995\u09ac\u09c7 \u09a4?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0987\u09a8\u09ab\u09b0\u09ae\u09c7\u09b6\u09a8 \u0995\u09c7\u09ae\u09a8 \u09a8\u09bf\u09b0\u09be\u09aa\u09a6 \u09a4\u09cb\u09ae\u09be\u09a6\u09c7\u09b0 \u09ac\u09cd\u09af\u09be\u0982\u0995\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 \u0995\u09c7\u09a8?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u09be\u0989\u09a8\u09cd\u099f \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 \u0995\u09c7\u09a8?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09aa\u09bf\u09a8 \u0995\u09c7\u09a8 \u09b2\u09be\u0997\u09ac\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u099f\u09be \u0995\u09c7\u09a8?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u099f\u09be \u0995\u09c7\u09a8 \u09b2\u09be\u0997\u09ac\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09bf\u09b8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09a4\u09cb\u09ae\u09be\u09b0 \u099c\u09be\u09a8\u09be \u09a6\u09b0\u0995\u09be\u09b0\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09c7\u09a8 \u09a6\u09bf\u09ac"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09bf\u09a4\u09c7 \u099a\u09be\u099a\u09cd\u099b\u09bf \u09a8\u09be\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a8\u09be \u09a6\u09bf\u09b2\u09c7 \u0995\u09bf \u0995\u09be\u099c \u0995\u09b0\u09ac\u09c7 \u09a8\u09be?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u099f\u09be \u09a8\u09be \u09a8\u09bf\u09df\u09c7 \u0995\u09be\u099c \u099a\u09be\u09b2\u09bf\u09df\u09c7 \u09af\u09be\u0993\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09c7\u09a8 \u099c\u09be\u09a8\u09be \u09a6\u09b0\u0995\u09be\u09b0?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09aa\u09bf\u09a8 \u0995\u09c7\u09a8 \u099c\u09be\u09a8\u09be \u09a6\u09b0\u0995\u09be\u09b0?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09ab\u09cb\u09a8 \u0995\u09c7\u09a8 \u099c\u09be\u09a8\u09be \u09a6\u09b0\u0995\u09be\u09b0?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0995\u09be\u09b0\u09cd\u09a1 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 \u0995\u09c7\u09a8 \u099c\u09be\u09a8\u09be \u09a6\u09b0\u0995\u09be\u09b0?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u098f\u0995\u09be\u0989\u09a8\u09cd\u099f \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 \u0995\u09c7\u09a8 \u099c\u09be\u09a8\u09be \u09a6\u09b0\u0995\u09be\u09b0?"
+            }
+          ]
+        }
+      ]
+    },
+    "greet": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u09b6\u09c1\u09ad \u09b8\u0995\u09be\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b6\u09c1\u09ad \u0985\u09aa\u09b0\u09be\u09b9\u09cd\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b6\u09c1\u09ad \u09b0\u09be\u09a4\u09cd\u09b0\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09c7\u09ae\u09a8 \u0986\u099b\u09c7\u09a8?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ad\u09be\u09b2\u09cb \u0986\u099b\u09c7\u09a8?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b6\u09c1\u09ad\u09c7\u099a\u09cd\u099b\u09be \u09a8\u09bf\u09a8\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09cd\u09af\u09be\u09b2\u09cb"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09be\u0987"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09c7\u0987"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0993\u09b9\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09be\u0987 \u09ac\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0993\u0997\u09cb"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b6\u09c1\u09a8\u099b"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0993\u0997\u09cb \u09b6\u09c1\u09a8\u099b"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "hi"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "hello"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "hay"
+            }
+          ]
+        }
+      ]
+    },
+    "inform": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "01712345678"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01718657895"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01631554678"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01924586565"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01712345678"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01712345678"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01924566565"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01631552578 \u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01924585565 \u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01718658595 \u098f\u099f\u09be \u0986\u09ae\u09be\u09b0 \u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "01631532678 \u098f\u099f\u09be \u0986\u09ae\u09be\u09b0 \u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 01631532678"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09ab\u09cb\u09a8 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 01924585565"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09be\u09b0\u09cd\u09a1 \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 9876557894"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "9876557894 \u0986\u09ae\u09be\u09b0 \u098f\u0995\u09be\u0989\u09a8\u09cd\u099f \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u098f\u0995\u09be\u0989\u09a8\u09cd\u099f \u09a8\u09be\u09ae\u09cd\u09ac\u09be\u09b0 55445354"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09aa\u09bf\u09a8 \u09b9\u099a\u09cd\u099b\u09c7 3256"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "1593 \u098f\u099f\u09be \u0986\u09ae\u09be\u09b0 \u09aa\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09aa\u09bf\u09a8 \u09b9\u099a\u09cd\u099b\u09c7 8564"
+            }
+          ]
+        }
+      ]
+    },
+    "out_of_scope": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09cd\u09af\u09be\u0982\u0995\u09c7\u09b0 \u09b2\u0995\u09be\u09b0\u09c7\u09b0 \u099a\u09be\u09ac\u09bf \u0995\u0987, \u0993 \u0995\u09be\u09b0 \u0995\u09be\u099b\u09c7 \u09a5\u09be\u0995\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0987\u0989\u099d\u09ab\u09a6\u09b8\u09cd\u0995\u099c\u0998\u09ab\u09a6 \u09a6\u09ab\u09b8\u09cd\u0995\u099c\u0998\u09a6\u09b8\u09cd\u09ab\u099c\u0995\u0997"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09b8\u09cd\u09ab\u0997\u0995\u099c\u0995\u09cd\u09b2\u09a6\u09ab"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09b8\u0997\u099c\u09b2\u09a6\u0995\u099c\u09ab\u09b8\u099c\u0997\u099c\u0995\u09cd\u09b2\u09b9\u09ab\u09a6\u09b8\u099d\u0997\u0995\u099c\u09b2\u09a6\u09b8\u09cd\u09ab\u09b9\u0997\u0995\u09cd\u09b2\u09b9\u09ab\u09a6\u09b8\u09cd\u09b2\u0995\u099c\u0998\u0995\u099c\u09b2\u09a6\u09b8\u09cd\u09ab"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09ab\u0997\u0995\u09cd\u09b2\u099c\u0998\u0995\u09cd\u09b2\u09ab\u09a6\u099c\u0997\u09cd\u09b2\u0995\u09ab\u09a6\u09b8\u099c \u09a6\u09ab\u0995\u09cd\u09b2\u099c\u0997\u0995\u09cd\u09b2\u099c\u09a6\u09ab\u0995\u0982\u09ab\u09a6\u09b8\u09cd\u0995\u09cd\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09cd\u0997\u0995\u09cd\u09b2\u0995\u09a6\u09ab\u099c\u0995\u0997\u099c"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9\u09b9"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8\u09b8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a1\u09ae\u09bf\u09a8\u09cb\u099c \u09aa\u09bf\u099c\u09cd\u099c\u09be \u098f\u09a4 \u09a6\u09be\u09ae \u0995\u09c7\u09a8, \u0995\u09bf \u09a6\u09bf\u09df\u09c7 \u0993\u0987 \u09aa\u09bf\u099c\u09cd\u099c\u09be \u09ac\u09be\u09a8\u09be\u09a8\u09cb \u09b9\u09df\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b9\u09cb\u0995 \u0986\u09ae\u09bf \u0987\u09df\u09be \u0995\u09b0\u09ac\u09cb"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09cd\u09af\u09be\u0982\u0995\u09c7\u09b0 \u09ae\u09be\u09b2\u09bf\u0995 \u09b9\u09a4\u09c7 \u0995\u09bf \u09b0\u0995\u09ae \u099f\u09be\u0995\u09be-\u09aa\u09df\u09b8\u09be \u09b2\u09be\u0997\u09ac\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09cd\u09af\u09be\u0982\u0995 \u0995\u09bf\u09ad\u09be\u09ac\u09c7 \u0995\u09bf\u09a8\u09be \u09af\u09be\u09df\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u099f\u09bf \u0985\u09cd\u09af\u09be\u09ae\u09cd\u09ac\u09c1\u09b2\u09c7\u09a8\u09cd\u09b8 \u0995\u09b2 \u0995\u09b0\u09c1\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u099f\u09bf \u0989\u09ac\u09be\u09b0 \u0995\u09b2 \u0995\u09b0\u09c1\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09aa\u09c1\u09b2\u09bf\u09b6 \u0995\u09b2 \u0995\u09b0\u09c1\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u0986\u09ae\u09be\u0995\u09c7 \u099a\u09c7\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09aa\u09bf\u09a4\u099c\u09be \u09aa\u09bf\u099c\u09cd\u099c\u09be \u0985\u09b0\u09cd\u09a1\u09be\u09b0 \u09a6\u09be\u0993"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0985\u09a8\u09b2\u09be\u0987\u09a8\u09c7 \u0996\u09be\u09ac\u09be\u09b0 \u0985\u09b0\u09cd\u09a1\u09be\u09b0 \u0995\u09b0\u09c1\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u0995\u09cd\u09b7\u09c1\u09a7\u09be\u09b0\u09cd\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ae\u09a8 \u0996\u09be\u09b0\u09be\u09aa"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u0986\u09aa\u09b8\u09c7\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u09b8\u09be\u09a5\u09c7 \u0998\u09c1\u09b0\u09a4\u09c7 \u09af\u09be\u09ac\u09c7\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09bf \u09a4\u09cb\u09ae\u09be\u09b0 \u09aa\u09cd\u09b0\u09c7\u09ae\u09c7 \u09aa\u09dc\u09c7\u099b\u09bf\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09bf\u09b6\u09be \u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09ae\u09c7\u09df\u09c7 \u09a8\u09be\u0995\u09bf \u099b\u09c7\u09b2\u09c7?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09ac\u09bf\u09ac\u09be\u09b9\u09bf\u09a4 \u09a8\u09be\u0995\u09bf \u0985\u09ac\u09bf\u09ac\u09be\u09b9\u09bf\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u0986\u09a8\u09ae\u09c7\u09b0\u09bf\u09a1"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09ac\u09bf\u09ac\u09be\u09b9\u09bf\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u09ac\u09bf\u09df\u09c7 \u0995\u09b0\u09c7\u099b"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09aa\u09c1\u09b2\u09bf\u09b6\u09c7 \u09ab\u09cb\u09a8 \u0995\u09b0\u09ac\u09cb"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09ad\u09c2\u09a4\u09c7 \u09ac\u09bf\u09b6\u09cd\u09ac\u09be\u09b8 \u0995\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09b0 \u0993\u099c\u09a8 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u0995\u09c7 \u0995\u09bf\u099b\u09c1 \u099f\u09be\u0995\u09be \u09a6\u09bf\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ac\u09af\u09bc\u09b8 \u0995\u09a4"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u0997\u09be\u0987\u09a4\u09c7 \u09aa\u09be\u09b0"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u0995\u099f\u09be \u0997\u09be\u09a8 \u0997\u09be\u0993"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09cd\u09b0\u09bf\u09af\u09bc \u09b0\u0982 \u0995\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09bf \u0986\u09ae\u09be\u0995\u09c7 \u09ac\u09bf\u09af\u09bc\u09c7 \u0995\u09b0\u09ac\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a6\u09bf\u09a8\u099f\u09be \u0995\u09c7\u09ae\u09a8 \u0997\u09c7\u099b\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09aa\u09a8\u09bf \u0995\u09bf \u09ac\u09c1\u09a6\u09cd\u09a7\u09bf\u09ae\u09be\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09c1\u09ae\u09bf \u0995\u09bf \u09ac\u09c1\u09a6\u09cd\u09a7\u09bf\u09ae\u09be\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09a4\u09cb\u09ae\u09be\u09b0 \u09aa\u09cd\u09b0\u09bf\u09df \u09aa\u09bf\u0995\u0986\u09aa \u09b2\u09be\u0987\u09a8 \u0995\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u0996\u09a8\u09cb \u09aa\u09cd\u09b0\u09c7\u09ae\u09c7 \u09aa\u09b0\u09c7\u099b"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7 \u0986\u09ae\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09a6\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u09b0 \u0986\u099c\u0995\u09c7 \u09ac\u09be\u09b0\u09cd\u09a5\u09a1\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09ae\u09be\u0995\u09c7 \u0989\u0987\u09b6 \u0995\u09b0, \u0986\u09ae\u09be\u09b0 \u099c\u09a8\u09cd\u09ae\u09a6\u09bf\u09a8 \u0986\u099c\u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u09b2\u09bf\u09af\u09bc\u09c7\u09a8 \u0986\u099b\u09c7 \u0995\u09bf"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u09b2\u09bf\u09af\u09bc\u09c7\u09a8 \u09b8\u09a4\u09cd\u09af\u09bf \u0986\u099b\u09c7\u0964"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09ae\u09b9\u09be\u099c\u09be\u0997\u09a4\u09bf\u0995 \u09aa\u09cd\u09b0\u09be\u09a8\u09c0 \u09a8\u09bf\u09df\u09c7 \u0986\u09ae\u09be\u0995\u09c7 \u0995\u09bf\u099b\u09c1 \u09ac\u09b2"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09bf\u09b0\u09bf \u0995\u09c7 \u099a\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09bf\u09b0\u09bf \u0995\u09c7 \u099a\u09c7\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u09b8\u09bf\u09b0\u09bf \u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0\u099f\u09be\u09a8\u09be \u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0\u099f\u09be\u09a8\u09be \u0995\u09c7 \u099a\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0\u099f\u09be\u09a8\u09be \u0995\u09c7 \u099a\u09c7\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0\u09cd\u099f\u09be\u09a8\u09be \u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0\u09cd\u099f\u09be\u09a8\u09be \u0995\u09c7 \u099a\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0995\u09b0\u09cd\u099f\u09be\u09a8\u09be \u0995\u09c7 \u099a\u09c7\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09b2\u09c7\u0995\u09cd\u09b8\u09be \u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u09b2\u09c7\u0995\u09cd\u09b8\u09be \u0995\u09c7"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u09b2\u09c7\u0995\u09cd\u09b8\u09be \u0995\u09c7 \u099a\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u098f\u09b2\u09c7\u0995\u09cd\u09b8\u09be \u0995\u09c7 \u099a\u09c7\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09b2\u09c7\u0995\u09cd\u09b8\u09be \u0995\u09c7 \u099a\u09bf\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u09b2\u09c7\u0995\u09cd\u09b8\u09be \u0995\u09c7 \u099a\u09c7\u09a8"
+            }
+          ]
+        }
+      ]
+    },
+    "weather": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7\u09b0 \u0986\u09ac\u09b9\u09be\u0993\u09df\u09be \u0995\u09c7\u09ae\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7\u09b0 \u0993\u09df\u09c7\u09a6\u09be\u09b0 \u0995\u09c7\u09ae\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7\u09b0 \u0993\u09df\u09c7\u09a6\u09be\u09b0 \u0995\u09bf \u09b0\u0995\u09ae"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7\u09b0 \u0993\u09df\u09c7\u099f \u098f\u0995\u099f\u09be \u0995\u09c7\u09ae\u09a8"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0993\u09df\u09c7\u09a6\u09be\u09b0 \u09b0\u09bf\u09aa\u09cb\u09b0\u09cd\u099f"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\u0986\u099c\u0995\u09c7\u09b0 \u0993\u09df\u09c7\u09ac\u09be\u09b0"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "language": "en"
+}

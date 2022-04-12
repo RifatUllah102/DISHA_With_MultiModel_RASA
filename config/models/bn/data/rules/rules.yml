@@ -1,0 +1,184 @@
+version: "2.0"
+rules:
+
+- rule: Say no_story
+  steps:
+  - or:
+    - intent: EMI_Query
+    - intent: campaign
+    - intent: account_activate
+  - action: utter_no_story
+
+- rule: handle affirm/deny without any reason
+  condition:
+  - active_loop: null
+  steps:
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: utter_dependent_intent_response
+
+- rule: handle dependent intent when no other form is active
+  condition:
+  - active_loop: null
+  steps:
+  - intent: inform
+  - action: utter_default
+
+- rule: handle explain intent if ask without any reason
+  condition:
+  - active_loop: null
+  steps:
+  - intent: explain
+  - action: utter_ask_rephrase
+
+- rule: handle user request for repeat last utter
+  steps:
+  - intent: Repeat
+  - action: Action_Repeat
+
+- rule: handle interrupt by user
+  steps:
+  - intent: interrupt
+  - action: action_interrupt
+
+- rule: BankingQuery response
+  steps:
+  - intent: BankingQuery
+  - action: utter_AT
+
+- rule: HELP topic
+  condition:
+  - active_loop: null
+  steps:
+  - intent: help
+  - action: utter_help
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: answer out of scope
+  steps:
+  - intent: out_of_scope
+  - action: Action_out_of_scope
+
+- rule: Disha_Name_Meanign
+  steps:
+  - intent: Name_meaning
+  - action: utter_Disha
+
+- rule: Bank Location
+  steps:
+  - intent: Bank_and_ATM_Location
+  - action: action_bank_location
+
+- rule: Agent Transfer
+  steps:
+    - intent: agent_transfer
+    - action: utter_AT
+    - action: action_deactivate_loop
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+
+- rule: Confirm that the bot is not a human
+  steps:
+  - intent: check_human
+  - action: utter_bot
+
+- rule: Exchange Rate Check
+  steps:
+    - intent: Exchange_rate
+    - action: utter_exchange_USD
+
+# - rule: check_balance intent in the middle of check balance
+#   condition:
+#   - active_loop: check_balance_form
+#   steps:
+#   - intent: check_balance
+#   - action: check_balance_form
+#   - active_loop: check_balance_form
+
+- rule: Activate e commerce when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: E_Commerce_Request
+  - action: action_E_Commerce_Request
+  - action: e_commerce_form
+  - active_loop: e_commerce_form
+
+- rule: Activate stop cheque when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: stop_cheque
+  - action: action_reset_ChequeANDamount
+  - action: cheque_form
+  - active_loop: cheque_form
+
+- rule: Activate Card_Activation form when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: Card_Activation
+  - action: action_reset_Card_Activation_Info
+  - action: Card_Activation_form
+  - active_loop: Card_Activation_form
+
+- rule: Activate card close when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: Card_Close
+  - action: action_Card_Close
+  - action: Card_DeActivation_form
+  - active_loop: Card_DeActivation_form
+
+- rule: Activate Credit_card_limit_form when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: Credit_Card_Limit
+  - action: action_reset_PINandCARDnumer
+  - action: Credit_card_limit_form
+  - active_loop: Credit_card_limit_form
+
+- rule: Activate bKash form when no other form is active
+  condition:
+  - active_loop: null
+  steps:
+  - intent: bKash_transfer
+  - action: action_reset_BkashTransectionVALUES
+  - action: bKash_form
+  - active_loop: bKash_form
+
+- rule: Activate weather when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: weather
+  - action: action_weather
+
+- rule: Tell Current Time
+  steps:
+  - intent: Ask_Time
+  - action: Action_Current_DateTime
+
+- rule: Thank You
+  steps:
+  - intent: thankyou
+  - action: utter_thanks
