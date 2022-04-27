@@ -814,9 +814,9 @@ stories:
   - slot_was_set:
     - requested_slot: card_number_confirm
   - slot_was_set:
-    - requested_slot: Father_Name
+    - requested_slot: account_number
   - slot_was_set:
-    - requested_slot: Mother_Name
+    - requested_slot: account_number_confirm
   - slot_was_set:
     - requested_slot: Birth_Date
   - slot_was_set:
@@ -867,7 +867,11 @@ stories:
   - intent: Card_Activation
   - action: action_reset_Card_Activation_Info
   - slot_was_set:
+    - card_number: null
+  - slot_was_set:
     - card_number_confirm: null
+  - slot_was_set:
+    - account_number_confirm: null
   - slot_was_set:
     - Father_Name: null
   - slot_was_set:
@@ -908,7 +912,11 @@ stories:
   - intent: Card_Activation
   - action: action_reset_Card_Activation_Info
   - slot_was_set:
+    - card_number: null
+  - slot_was_set:
     - card_number_confirm: null
+  - slot_was_set:
+    - account_number_confirm: null
   - slot_was_set:
     - Father_Name: null
   - slot_was_set:
@@ -954,13 +962,19 @@ stories:
   - slot_was_set:
     - card_check: false
   - slot_was_set:
-    - requested_slot: Father_Name
+    - requested_slot: account_number
   - slot_was_set:
-    - Father_Name: বাবা
+    - Father_Name: '12365478'
   - slot_was_set:
-    - requested_slot: Mother_Name
+    - ACtext: ', ওয়ান, টু, থ্রি, সিক্স, ফাইভ, ফোর, সেভেন, এইট,'
   - slot_was_set:
-    - Mother_Name: হাসিনা
+    - requested_slot: account_number_confirm
+  - slot_was_set:
+    - card_number_confirm: affirm
+  - slot_was_set:
+    - ACtext: null
+  - slot_was_set:
+    - account_check: false
   - slot_was_set:
     - requested_slot: Birth_Date
   - slot_was_set:
@@ -986,10 +1000,10 @@ stories:
     - requested_slot: card_number
   - slot_was_set:
     - requested_slot: card_number_confirm
-  - slot_was_set:
-    - requested_slot: Father_Name
-  - slot_was_set:
-    - requested_slot: Mother_Name
+  # - slot_was_set:
+  #   - requested_slot: Father_Name
+  # - slot_was_set:
+  #   - requested_slot: Mother_Name
   - slot_was_set:
     - requested_slot: Birth_Date
   - slot_was_set:
@@ -1019,6 +1033,8 @@ stories:
   steps:
   - intent: Card_Close
   - action: action_Card_Close
+  - slot_was_set:
+    - card_number: null
   - slot_was_set:
     - card_number_confirm: null
   - slot_was_set:
@@ -1059,6 +1075,8 @@ stories:
   steps:
   - intent: Card_Close
   - action: action_Card_Close
+  - slot_was_set:
+    - card_number: null
   - slot_was_set:
     - card_number_confirm: null
   - slot_was_set:
@@ -1104,14 +1122,14 @@ stories:
     - CardText: null
   - slot_was_set:
     - card_check: false
-  - slot_was_set:
-    - requested_slot: Father_Name
-  - slot_was_set:
-    - Father_Name: বাবা
-  - slot_was_set:
-    - requested_slot: Mother_Name
-  - slot_was_set:
-    - Mother_Name: হাসিনা
+  # - slot_was_set:
+  #   - requested_slot: Father_Name
+  # - slot_was_set:
+  #   - Father_Name: বাবা
+  # - slot_was_set:
+  #   - requested_slot: Mother_Name
+  # - slot_was_set:
+  #   - Mother_Name: হাসিনা
   - slot_was_set:
     - requested_slot: Birth_Date
   - slot_was_set:
@@ -1272,7 +1290,11 @@ stories:
   - intent: Card_Activation
   - action: action_reset_Card_Activation_Info
   - slot_was_set:
+    - card_number: null
+  - slot_was_set:
     - card_number_confirm: null
+  - slot_was_set:
+    - account_number_confirm: null
   - slot_was_set:
     - Father_Name: null
   - slot_was_set:
@@ -1302,13 +1324,19 @@ stories:
   - slot_was_set:
     - card_check: false
   - slot_was_set:
-    - requested_slot: Father_Name
+    - requested_slot: account_number
   - slot_was_set:
-    - Father_Name: বাবা
+    - Father_Name: '12365478'
   - slot_was_set:
-    - requested_slot: Mother_Name
+    - ACtext: ', ওয়ান, টু, থ্রি, সিক্স, ফাইভ, ফোর, সেভেন, এইট,'
   - slot_was_set:
-    - Mother_Name: হাসিনা
+    - requested_slot: account_number_confirm
+  - slot_was_set:
+    - card_number_confirm: affirm
+  - slot_was_set:
+    - ACtext: null
+  - slot_was_set:
+    - account_check: false
   - slot_was_set:
     - requested_slot: Birth_Date
   - slot_was_set:
@@ -1380,6 +1408,8 @@ stories:
   - intent: Card_Close
   - action: action_Card_Close
   - slot_was_set:
+    - card_number: null
+  - slot_was_set:
     - card_number_confirm: null
   - slot_was_set:
     - Father_Name: null
@@ -1409,14 +1439,14 @@ stories:
     - CardText: null
   - slot_was_set:
     - card_check: false
-  - slot_was_set:
-    - requested_slot: Father_Name
-  - slot_was_set:
-    - Father_Name: বাবা
-  - slot_was_set:
-    - requested_slot: Mother_Name
-  - slot_was_set:
-    - Mother_Name: হাসিনা
+  # - slot_was_set:
+  #   - requested_slot: Father_Name
+  # - slot_was_set:
+  #   - Father_Name: বাবা
+  # - slot_was_set:
+  #   - requested_slot: Mother_Name
+  # - slot_was_set:
+  #   - Mother_Name: হাসিনা
   - slot_was_set:
     - requested_slot: Birth_Date
   - slot_was_set:
@@ -1431,5 +1461,7 @@ stories:
     - CardText: null
   - slot_was_set:
     - amountBengaliWord: null
+  - slot_was_set:
+    - card_number: null
 
 

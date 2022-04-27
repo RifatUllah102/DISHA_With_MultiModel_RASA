@@ -628,13 +628,31 @@ class ResetCardActivationInfo(Action):
 
         if story_status == True or currentloop != None:
             # dispatcher.utter_message(response="utter_ask_continue_form")
-            return [ActionExecuted("action_listen")]
+            return [FollowupAction(currentloop)]
 
         # if story_status == True:
         #     return [UserUtteranceReverted()]
+
+        ac_num = tracker.get_slot("account_number")
+
+        if ac_num is not None:
+            return[
+                    SlotSet("card_number", None),
+                    SlotSet("card_number_confirm", None),
+                    SlotSet("account_number_confirm", "affirm"),
+                    SlotSet("Father_Name", None),
+                    SlotSet("Mother_Name", None),
+                    SlotSet("Birth_Date", None),
+                    SlotSet("Incomplete_Story", True),
+                    SlotSet("NumberInWord", None),
+                    SlotSet("amountBengaliWord", None),
+                    SlotSet("CardText", None),
+                    ]
         else:
             return[
+                    SlotSet("card_number", None),
                     SlotSet("card_number_confirm", None),
+                    SlotSet("account_number_confirm", None),
                     SlotSet("Father_Name", None),
                     SlotSet("Mother_Name", None),
                     SlotSet("Birth_Date", None),
@@ -875,9 +893,9 @@ class actionDateTime(Action):
         
 
         d_msg = f"আজকের তারিখ হচ্ছে, {D}, {Mon}, {Y} ।"
-        msg = f"এখন সময়, {hour} টা বেজে {Minutes} মিনিট।"
+        msg = f"এখন সময়, {hour} টা বেজে {Minutes} মিনিট। আমি আর কিভাবে আপনাকে সহায়তা করতে পারি?"
         message = f"এখন সময়, {hour} টা বেজে {Minutes} মিনিট। আজকের তারিখ হচ্ছে, {D}, {Mon}, {Y} ।"
-        dispatcher.utter_message(text = message)
+        dispatcher.utter_message(text = msg)
 
         if "তারিখ" in text:
             pass
@@ -1025,6 +1043,7 @@ class ActionCard_Close(Action):
             return [ActionExecuted("action_listen")]
         else:
             return[
+                    SlotSet("card_number", None),
                     SlotSet("card_number_confirm", None),
                     SlotSet("Father_Name", None),
                     SlotSet("Mother_Name", None),
@@ -1104,6 +1123,7 @@ class ActionCloseCard(Action):
                 SlotSet("Incomplete_Story", False),
                 SlotSet("NumberInWord", None),
                 SlotSet("amountBengaliWord", None),
+                SlotSet("card_number", None),
                 ]
 
 class ActionGreet(Action):
@@ -1633,82 +1653,179 @@ class ActionValidationCardActivation(FormValidationAction):
             print("something else.")
             # dispatcher.utter_message(response = "utter_ask_continue_form")
             return {"card_number_confirm": None, "requested_slot": "card_number_confirm"}
-    
-    async def validate_Father_Name(
+
+    async def validate_account_number(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
-    
+        """Executes the action"""
         """Executes the action"""
         print(tracker.latest_message['intent'].get('name'))
         print(tracker.latest_message['intent']['confidence'])
-        active_loop = tracker.active_loop.get('name')
-        print(f"active loop is, {active_loop}")
-        SLT = tracker.slots.get('name')
-        print(f"the rasa is requesting for {SLT}")
         
-        print("validate_Father_Name")
-        Name = tracker.get_slot("Father_Name")
-        print("Name is in validate form and it is ", Name)
+        print("validate_account_number")
+        ac = tracker.get_slot("account_number")
+        print("AC Number is : ", ac)
+        ac_confirm = tracker.get_slot("account_number_confirm")
 
-        #NAME can't be a number
-        for character in Name:
-            if character.isdigit():
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Father_Name": None}
-                # return [
-                #         SlotSet("Father_Name", None),
-                #         SlotSet("Incomplete_Story", True),
-                #         ]
-        if Name!=None:
-            if (len(Name) < 4):
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Father_Name": None, "requested_slot":"Father_Name"}
-            else:
-                print("Correct Name")
-                return {"Father_Name": Name}
-        else:
-            dispatcher.utter_message(response="utter_invalidNAME")
-            return {"Father_Name": None, "requested_slot":"Father_Name"}
+        if ac_confirm == "affirm":
+            print('I am Here.')
+            # return {"requested_slot":"PIN"}
+            return[]
+
         
-    async def validate_Mother_Name(
+        #BANGLA Check Here
+        if (not is_ascii(ac)):  #If Bangla then enter here. is_ascii(otp) True for English
+            cn = None
+            if ac.isnumeric():
+                cn = BnToEn(ac)
+                print(str(cn))
+                ac = str(cn)
+                print("account Number is ", ac)
+                tracker.slots["account_number"] = ac
+                if len(ac)!=8 or ac == None:
+                    dispatcher.utter_message(response="utter_invalidACNumber")
+                    return {"account_number": None}
+                else:
+                    print("Correct account Number")
+                    # account = db_manager.set_slot_value(tracker.sender_id, "account_number", ac)
+                    print(f"Original account number is {ac}")
+                    ac_num = ac[-4:]
+                    print(f"Last 4 digit of the account number is {ac_num}")
+                    ACINword = numberTranslate(ac_num)
+                    print(f"AC Number in Bangla: {ACINword}")
+                    return {"account_number": ac, "ACtext": ACINword, "requested_slot": "account_number_confirm"}
+                    # return [
+                    #         SlotSet("account_number", ac),
+                    #         SlotSet("Incomplete_Story", True),
+                    #         ]
+        else:
+            if len(ac)!=8 or ac == None:
+                dispatcher.utter_message(response="utter_invalidACNumber")
+                return {"account_number": None, "requested_slot": "account_number"}
+
+            else:
+                print("Correct account Number")
+                print(f"Original account number is {ac}")
+                print(type(ac))
+                ac_num = ac[-4:]
+                print(f"Last 4 digit of the account number is {ac_num}")
+                ACINword = numberTranslate(ac_num)
+                print(f"AC Number in Bangla: {ACINword}")
+                return {"account_number": ac, "ACtext": ACINword, "requested_slot": "account_number_confirm"}
+
+    
+    async def validate_account_number_confirm(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
-    
         """Executes the action"""
         print(tracker.latest_message['intent'].get('name'))
         print(tracker.latest_message['intent']['confidence'])
-        active_loop = tracker.active_loop.get('name')
-        print(f"active loop is, {active_loop}")
-        SLT = tracker.slots.get('name')
-        print(f"the rasa is requesting for {SLT}")
-        
-        print("validate_Mother_Name")
-        Name = tracker.get_slot("Mother_Name")
-        print("Name is in validate form and it is ",Name)
+        ac_confirm = tracker.get_slot("account_number_confirm")
 
-        #USERNAME can't be a number
-        for character in Name:
-            if character.isdigit():
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Mother_Name": None, "requested_slot":"Mother_Name"}
-        if Name!=None:
-            if (len(Name) < 4):
-                dispatcher.utter_message(response="utter_invalidNAME")
-                # return {"Mother_Name": None}
-                return {"Mother_Name": None, "requested_slot":"Mother_Name"}
-            else:
-                return {"Mother_Name": Name}
+        if ac_confirm == "affirm":
+            print('I am Here.')
+            return []
+        
+        intent = tracker.latest_message['intent'].get('name')
+
+        if intent == "affirm":
+            return{"account_number_confirm": "affirm", "ACtext": None, "account_check": False}
+            # return [
+            #         SlotSet("account_number_confirm", "affirm"),
+            #         SlotSet("Incomplete_Story", True),
+            #         SlotSet("ACtext", None),
+            #         ]
+        elif intent == "deny":
+            print("account number is not correct.")
+            return {"account_number_confirm": None, "account_number": None, "ACtext": None, "requested_slot": "account_number"}
         else:
-            dispatcher.utter_message(response="utter_invalidNAME")
-            return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+            print("something else.")
+            # dispatcher.utter_message(response = "utter_ask_continue_form")
+            return {"account_number_confirm": None, "requested_slot": "account_number_confirm"}
+
+    # async def validate_Father_Name(
+    #     self,
+    #     slot_value: Any,
+    #     dispatcher: CollectingDispatcher,
+    #     tracker: Tracker,
+    #     domain: Dict[Text, Any],
+    # ) -> List[Dict]:
+    
+    #     """Executes the action"""
+    #     print(tracker.latest_message['intent'].get('name'))
+    #     print(tracker.latest_message['intent']['confidence'])
+    #     active_loop = tracker.active_loop.get('name')
+    #     print(f"active loop is, {active_loop}")
+    #     SLT = tracker.slots.get('name')
+    #     print(f"the rasa is requesting for {SLT}")
+        
+    #     print("validate_Father_Name")
+    #     Name = tracker.get_slot("Father_Name")
+    #     print("Name is in validate form and it is ", Name)
+
+    #     #NAME can't be a number
+    #     for character in Name:
+    #         if character.isdigit():
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Father_Name": None}
+    #             # return [
+    #             #         SlotSet("Father_Name", None),
+    #             #         SlotSet("Incomplete_Story", True),
+    #             #         ]
+    #     if Name!=None:
+    #         if (len(Name) < 4):
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Father_Name": None, "requested_slot":"Father_Name"}
+    #         else:
+    #             print("Correct Name")
+    #             return {"Father_Name": Name}
+    #     else:
+    #         dispatcher.utter_message(response="utter_invalidNAME")
+    #         return {"Father_Name": None, "requested_slot":"Father_Name"}
+        
+    # async def validate_Mother_Name(
+    #     self,
+    #     slot_value: Any,
+    #     dispatcher: CollectingDispatcher,
+    #     tracker: Tracker,
+    #     domain: Dict[Text, Any],
+    # ) -> List[Dict]:
+    
+    #     """Executes the action"""
+    #     print(tracker.latest_message['intent'].get('name'))
+    #     print(tracker.latest_message['intent']['confidence'])
+    #     active_loop = tracker.active_loop.get('name')
+    #     print(f"active loop is, {active_loop}")
+    #     SLT = tracker.slots.get('name')
+    #     print(f"the rasa is requesting for {SLT}")
+        
+    #     print("validate_Mother_Name")
+    #     Name = tracker.get_slot("Mother_Name")
+    #     print("Name is in validate form and it is ",Name)
+
+    #     #USERNAME can't be a number
+    #     for character in Name:
+    #         if character.isdigit():
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #     if Name!=None:
+    #         if (len(Name) < 4):
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             # return {"Mother_Name": None}
+    #             return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #         else:
+    #             return {"Mother_Name": Name}
+    #     else:
+    #         dispatcher.utter_message(response="utter_invalidNAME")
+    #         return {"Mother_Name": None, "requested_slot":"Mother_Name"}
 
     async def validate_Birth_Date(
         self,
@@ -1849,81 +1966,81 @@ class ActionValidationCardDeactivation(FormValidationAction):
             # dispatcher.utter_message(response = "utter_ask_continue_form")
             return {"card_number_confirm": None, "requested_slot": "card_number_confirm"}
     
-    async def validate_Father_Name(
-        self,
-        slot_value: Any,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict]:
+    # async def validate_Father_Name(
+    #     self,
+    #     slot_value: Any,
+    #     dispatcher: CollectingDispatcher,
+    #     tracker: Tracker,
+    #     domain: Dict[Text, Any],
+    # ) -> List[Dict]:
     
-        """Executes the action"""
-        print(tracker.latest_message['intent'].get('name'))
-        print(tracker.latest_message['intent']['confidence'])
-        active_loop = tracker.active_loop.get('name')
-        print(f"active loop is, {active_loop}")
-        SLT = tracker.slots.get('name')
-        print(f"the rasa is requesting for {SLT}")
+    #     """Executes the action"""
+    #     print(tracker.latest_message['intent'].get('name'))
+    #     print(tracker.latest_message['intent']['confidence'])
+    #     active_loop = tracker.active_loop.get('name')
+    #     print(f"active loop is, {active_loop}")
+    #     SLT = tracker.slots.get('name')
+    #     print(f"the rasa is requesting for {SLT}")
         
-        print("validate_Father_Name")
-        Name = tracker.get_slot("Father_Name")
-        print("Name is in validate form and it is ", Name)
+    #     print("validate_Father_Name")
+    #     Name = tracker.get_slot("Father_Name")
+    #     print("Name is in validate form and it is ", Name)
 
-        #NAME can't be a number
-        for character in Name:
-            if character.isdigit():
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Father_Name": None}
-                # return [
-                #         SlotSet("Father_Name", None),
-                #         SlotSet("Incomplete_Story", True),
-                #         ]
-        if Name!=None:
-            if (len(Name) < 4):
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Father_Name": None, "requested_slot":"Father_Name"}
-            else:
-                print("Correct Name")
-                return {"Father_Name": Name}
-        else:
-            dispatcher.utter_message(response="utter_invalidNAME")
-            return {"Father_Name": None, "requested_slot":"Father_Name"}
+    #     #NAME can't be a number
+    #     for character in Name:
+    #         if character.isdigit():
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Father_Name": None}
+    #             # return [
+    #             #         SlotSet("Father_Name", None),
+    #             #         SlotSet("Incomplete_Story", True),
+    #             #         ]
+    #     if Name!=None:
+    #         if (len(Name) < 4):
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Father_Name": None, "requested_slot":"Father_Name"}
+    #         else:
+    #             print("Correct Name")
+    #             return {"Father_Name": Name}
+    #     else:
+    #         dispatcher.utter_message(response="utter_invalidNAME")
+    #         return {"Father_Name": None, "requested_slot":"Father_Name"}
         
-    async def validate_Mother_Name(
-        self,
-        slot_value: Any,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict]:
+    # async def validate_Mother_Name(
+    #     self,
+    #     slot_value: Any,
+    #     dispatcher: CollectingDispatcher,
+    #     tracker: Tracker,
+    #     domain: Dict[Text, Any],
+    # ) -> List[Dict]:
     
-        """Executes the action"""
-        print(tracker.latest_message['intent'].get('name'))
-        print(tracker.latest_message['intent']['confidence'])
-        active_loop = tracker.active_loop.get('name')
-        print(f"active loop is, {active_loop}")
-        SLT = tracker.slots.get('name')
-        print(f"the rasa is requesting for {SLT}")
+    #     """Executes the action"""
+    #     print(tracker.latest_message['intent'].get('name'))
+    #     print(tracker.latest_message['intent']['confidence'])
+    #     active_loop = tracker.active_loop.get('name')
+    #     print(f"active loop is, {active_loop}")
+    #     SLT = tracker.slots.get('name')
+    #     print(f"the rasa is requesting for {SLT}")
         
-        print("validate_Mother_Name")
-        Name = tracker.get_slot("Mother_Name")
-        print("Name is in validate form and it is ",Name)
+    #     print("validate_Mother_Name")
+    #     Name = tracker.get_slot("Mother_Name")
+    #     print("Name is in validate form and it is ",Name)
 
-        #USERNAME can't be a number
-        for character in Name:
-            if character.isdigit():
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Mother_Name": None, "requested_slot":"Mother_Name"}
-        if Name!=None:
-            if (len(Name) < 4):
-                dispatcher.utter_message(response="utter_invalidNAME")
-                # return {"Mother_Name": None}
-                return {"Mother_Name": None, "requested_slot":"Mother_Name"}
-            else:
-                return {"Mother_Name": Name}
-        else:
-            dispatcher.utter_message(response="utter_invalidNAME")
-            return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #     #USERNAME can't be a number
+    #     for character in Name:
+    #         if character.isdigit():
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #     if Name!=None:
+    #         if (len(Name) < 4):
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             # return {"Mother_Name": None}
+    #             return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #         else:
+    #             return {"Mother_Name": Name}
+    #     else:
+    #         dispatcher.utter_message(response="utter_invalidNAME")
+    #         return {"Mother_Name": None, "requested_slot":"Mother_Name"}
 
     async def validate_Birth_Date(
         self,
