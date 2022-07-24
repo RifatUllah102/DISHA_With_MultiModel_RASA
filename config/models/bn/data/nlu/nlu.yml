@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -73,8 +72,15 @@ nlu:
     - তোমার সম্পর্কে আমাকে কিছু বল
     - কে তোমাকে তৈরী করেছে
     - তোমাকে কে সৃষ্টি করেছে
-    - আপনার নাম কি
     - কি নামে ডাকব
+- intent: Account_Address_Update
+  examples: |
+    - এড্রেস আপডেট করব
+    - একাউন্ট ইনফরমেশন আপডেট
+    - একাউন্ট আপডেট
+    - আপডেট করব
+    - আমার একাউন্ট এর ঠিকানা পরিবর্তন করব।
+    - একাউন্ট এর ঠিকানা পরিবর্তন
 - intent: Card_Activation
   examples: |
     - কার্ড এক্টিভেইট করব
@@ -85,7 +91,6 @@ nlu:
     - কার্ড অ্যাক্টিভেট করবো
     - কার্ড সক্রিয় করবো বলতে হবে না
     - কার্ডটি অ্যাক্টিভেট করবো
-    - কার্ড অ্যাক্টিভেট করবো
 - intent: Card_Close
   examples: |
     - কার্ড ডিএক্টিভেইট করব
@@ -105,11 +110,35 @@ nlu:
   examples: |
     - ইকমারস এনাবল
     - ইকমারস রিকুয়েস্ট
-    - ইকমারস রিকুয়েস্ট
-    - ইকমারস এনাবল
-    - ইকমারস এনাবল
     - ইকমারস সার্ভিস
     - ইকমারস সার্ভিস এনাবল
+    - আমি আমার ইকমারস সার্ভিস এনাবল করতে চায়
+    - ইকমারস সার্ভিস অন করে দিতে হবে
+    - ইকমারস সার্ভিস লাগবে
+- intent: TPIN_Generation
+  examples: |
+    - টি পিন জেনারেট করব
+    - টি পিন জেনারেট
+    - পিন জেনারেট করব
+    - কার্ড এক্টিভেইট করব কিন্তু টি পিন লাগবে
+    - কার্ড এক্টিভেইট করব কিন্তু টি পিন চাচ্ছে
+- intent: Loan_Related_Query
+  examples: |
+    - আমার একটা পারসোনাল লোন বিষয়ে কথা ছিল
+    - লোনের কিস্তির ব্যাপারে কথা বলা উচিত ছিল
+    - লোনের কিস্তির ব্যাপারে জানতে চায়
+    - লোনের জন্য কাগজপত্র দিয়েছিলাম
+    - লোনের জন্য রিকুয়েস্ট করেছি 
+    - লোনের জন্য আবেদন করেছিলাম
+    - লোনের জন্য আবেদন করেছিলাম এবং ভেরিফিকেশন এর জন্য ফোন করেছিল
+    - লোনের ডিউ কত আছে
+    - আমার লোনের বাকি আছে কত
+    - লোনের বাকি কত
+    - লোন ডিউ কত
+    - অবশিষ্ট লোন কত আছে
+    - আমি আমার লোন সম্পর্কে জানতে চাচ্ছি
+    - আমার হোম লোন কি আছে
+    - আমার লোন সম্পর্কে একটু তথ্য দেন
 - intent: EMI_Query
   examples: |
     - ইএমআই ইনফরমেশন
@@ -137,13 +166,8 @@ nlu:
     - [মিরপুর](location) শাখার অ্যাড্রেসটা বলুন
     - [বনানী](location) শাখার অ্যাড্রেসটা বলুন
     - [বারিধারা](location) এ কি তোমাদের শাখা আছে
-    - [গুলশান](location) এ কি তোমাদের শাখা আছে
-    - [শ্যামলী](location) এ কি তোমাদের শাখা আছে
-    - [মিরপুর](location) শাখার অ্যাড্রেসটা বলুন
-    - [বনানী](location) শাখার অ্যাড্রেসটা বলুন
     - [মিরপুর](location) অ্যাড্রেসটা বলুন
     - [বনানী](location) অ্যাড্রেসটা বলুন
-    - [বারিধারা](location) এ কি তোমাদের শাখা আছে
     - তোমাদের শাখা কোথায় আছে
     - সিটি ব্যাংকের ব্রাঞ্চ সংখ্যা কত বললেন
     - [মতিঝিলে](location) কি ব্রাঞ্চ আছে
@@ -178,6 +202,9 @@ nlu:
     - জি হ্যাঁ ঠিক আছে
     - কন্টিনিউ করতে চাই
     - কন্টিনিউ করতে চায়
+    - জানতে চায়
+    - জানতে চাই
+    - হ্যাঁ চাই
 - intent: deny
   examples: |
     - no
@@ -192,7 +219,7 @@ nlu:
     - মিথ্যা
     - ঋণাত্মক
     - ঠিক না
-    - না চায় না।
+    - না চায় না
     - না করতে হবে না
     - অফ করে দাও
     - বাদ দাও
@@ -485,7 +512,7 @@ nlu:
     - [869137](cheque_number)
     - [231976](cheque_number)
     - [100](amount-of-money)
-    - [1000](amount-of-money) 
+    - [1000](amount-of-money)
     - [5000](amount-of-money)
     - [500](amount-of-money)
     - [200](amount-of-money)
@@ -493,9 +520,6 @@ nlu:
     - [3000](amount-of-money)
     - [300](amount-of-money)
     - [10000](amount-of-money)
-    - [1000](amount-of-money)
-    - [5000](amount-of-money) 
-    - [3000](amount-of-money)
     - [30000](amount-of-money)
     - [2500](amount-of-money)
     - [3500](amount-of-money)
@@ -511,8 +535,24 @@ nlu:
     - [2500](amount-of-money) টাকা
     - ৳ [5000](amount-of-money)
     - টাকা [10000](amount-of-money)
-    - [বাবা](Father_Name)
-    - [মা](Mother_Name)
+    - [বাবা](Relation_to_Nominee)
+    - [মা](Relation_to_Nominee)
+    - আমার [বাবা](Relation_to_Nominee)
+    - আমার [মা](Relation_to_Nominee)
+    - [ভাই](Relation_to_Nominee)
+    - [বোন](Relation_to_Nominee)
+    - [বন্ধু](Relation_to_Nominee)
+    - [ওয়াইফ](Relation_to_Nominee)
+    - [স্ত্রী](Relation_to_Nominee)
+    - [স্ত্রি](Relation_to_Nominee)
+    - [মামা](Relation_to_Nominee)
+    - [খালা](Relation_to_Nominee)
+    - [875](Card_Last_Number)
+    - [589](Card_Last_Number)
+    - [698](Card_Last_Number)
+    - আমার কার্ড এর লাস্ট ডিজিট হচ্ছে [521](Card_Last_Number)
+    - আমার কার্ড এর লাস্ট ডিজিট হচ্ছে [796](Card_Last_Number)
+    - কার্ড এর লাস্ট ডিজিট হচ্ছে [168](Card_Last_Number)
     - [ইয়াহিয়া](Father_Name)
     - [আমিনুল ইসলাম খান](Father_Name)
     - [আমির আবদুল্লাহ খান নিয়াজি](Father_Name)
@@ -534,6 +574,33 @@ nlu:
     - [20/11/1985](Birth_Date)
     - [07/10/1980](Birth_Date)
     - [31/12/1968](Birth_Date)
+    - [01/02/1994](Birth_Date)
+    - আমার কার্ড এর লাস্ট ডিজিট হচ্ছে [548](Card_Last_Number)
+    - [মা](Relation_to_Nominee)
+    - কার্ড এর লাস্ট ডিজিট হচ্ছে [457](Card_Last_Number)
+    - [বোন](Relation_to_Nominee)
+    - [z1258](post_code)
+    - [p1287](post_code)
+    - [A9210](post_code)
+    - [A1216](post_code)
+    - পোষ্ট কোড হচ্ছে [A1207](post_code)
+    - [A1212](post_code) আমার পোস্ট কোড
+    - [A1210](post_code)
+    - [A1230](post_code)
+    - পোষ্ট কোড হচ্ছে [A1212](post_code)
+    - [A1230](post_code) আমার পোস্ট কোড
+    - আমার হাউজ নম্বার [H11](House)
+    - আমার হাউজ নম্বার [H10](House)
+    - [R12](Road)
+    - [R07](Road)
+    - [H15](House)
+    - আমার রোড নম্বার [R11](Road)
+    - রোড নম্বার [R10](Road)
+    - [R07](Road)
+    - [R04](Road)
+    - [H15](House)
+    - [H40](House)
+    - [H18](House)
 - intent: out_of_scope
   examples: |
     - ব্যাংকের লকারের চাবি কই, ও কার কাছে থাকে?
@@ -601,24 +668,27 @@ nlu:
     - এলেক্সা কে চেন
     - আলেক্সা কে চিন
     - আলেক্সা কে চেন
-# - regex: PIN
-#   examples: |
-#       - \b\d{4}\b
+- regex: Card_Last_Number
+  examples: |
+    - \d{3}
 - regex: PIN
   examples: |
-      - \d{4}
+    - \d{4}
 - regex: account_number
   examples: |
-      - \d{8}
-- regex: card_number
-  examples: |
-      - \d{10}
-- regex: cheque_number
-  examples: |
-      - \d{6}
+    - \d{8}
 - regex: amount-of-money
   examples: |
-      - [0-9]
+    - [0-9]
+- regex: card_number
+  examples: |
+    - \d{10}
+- regex: cheque_number
+  examples: |
+    - \d{6}
 - regex: phone_number
   examples: |
-      - \d{11}
+    - \d{11}
+- regex: post_code
+  examples: |
+    - [a-zA-Z]\d{1}[0-9]\d{4}

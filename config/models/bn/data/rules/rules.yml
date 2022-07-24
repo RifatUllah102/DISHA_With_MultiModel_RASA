@@ -4,7 +4,6 @@ rules:
 - rule: Say no_story
   steps:
   - or:
-    - intent: EMI_Query
     - intent: campaign
     - intent: account_activate
   - action: utter_no_story
@@ -111,7 +110,9 @@ rules:
   # this condition allows stories to handle form switching
   - active_loop: null
   steps:
-  - intent: E_Commerce_Request
+  - or:
+    - intent: E_Commerce_Request
+    - intent: TPIN_Generation
   - action: action_E_Commerce_Request
   - action: e_commerce_form
   - active_loop: e_commerce_form
@@ -172,6 +173,16 @@ rules:
   steps:
   - intent: weather
   - action: action_weather
+
+- rule: Activate Account_Address_Update when no other form is active
+  condition:
+  # this condition allows stories to handle form switching
+  - active_loop: null
+  steps:
+  - intent: Account_Address_Update
+  - action: action_Account_Address_Update
+  - action: Address_Update_form
+  - active_loop: Address_Update_form
 
 - rule: Tell Current Time
   steps:

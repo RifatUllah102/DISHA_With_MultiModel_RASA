@@ -349,3 +349,427 @@ PwRNoEw882sl28bGAAAF	বিকাশ করব
 PwRNoEw882sl28bGAAAF	কেন দিব
 PwRNoEw882sl28bGAAAF	আজকের আবহাওয়া কেমন
 PwRNoEw882sl28bGAAAF	টাইম কত
+pt_E-2FxAAi61zGbAAAB	hi
+pt_E-2FxAAi61zGbAAAB	hi
+pt_E-2FxAAi61zGbAAAB	hi
+pt_E-2FxAAi61zGbAAAB	hi
+gUDFtogPgpn8hEckAAAB	hi
+MPuxKa_dCi8WRMXzAAAD	hi
+DcqoVK4kGLW0b8jeAAAF	hi
+KnM_nGqYb51b3CcFAAAB	hi
+ek3KLp5GbV_YdBnEAAAB	hi
+_zaIstVOdMEfXLKpAAAB	hi
+Sf3pUGpioEs6Sr1SAAAB	hi
+J1LTfrkVydwhMElOAAAB	hi
+J1LTfrkVydwhMElOAAAB	hkjhk
+oILrzIqIHwg690iGAAAD	hi
+2TRt7-54ajUZtn33AAAF	hi
+0alMDk1iUS7QF-YbAAAD	hi
+0alMDk1iUS7QF-YbAAAD	hi
+lXwr9rk6jjMKg0qaAAAB	hi
+lXwr9rk6jjMKg0qaAAAB	amr balance
+lXwr9rk6jjMKg0qaAAAB	আম্র বালাঞ্চে কত 
+lXwr9rk6jjMKg0qaAAAB	আমার ব্যাল্যান্সে কত 
+lXwr9rk6jjMKg0qaAAAB	12345678
+lXwr9rk6jjMKg0qaAAAB	yes
+lXwr9rk6jjMKg0qaAAAB	1324
+lXwr9rk6jjMKg0qaAAAB	yes
+lXwr9rk6jjMKg0qaAAAB	বিকাশ ত্রান্সফের করব 
+lXwr9rk6jjMKg0qaAAAB	01558666739
+lXwr9rk6jjMKg0qaAAAB	yes
+lXwr9rk6jjMKg0qaAAAB	250
+lXwr9rk6jjMKg0qaAAAB	yes
+r4DZtnAe4p4b0IvOAAAD	hi
+lXwr9rk6jjMKg0qaAAAB	আমার ব্যাল্যান্সে কত
+lXwr9rk6jjMKg0qaAAAB	1234
+lXwr9rk6jjMKg0qaAAAB	yes
+lXwr9rk6jjMKg0qaAAAB	বিকাশ ত্রান্সফের করব 
+lXwr9rk6jjMKg0qaAAAB	01558666739
+lXwr9rk6jjMKg0qaAAAB	yes
+lXwr9rk6jjMKg0qaAAAB	1200
+lXwr9rk6jjMKg0qaAAAB	yes
+lXwr9rk6jjMKg0qaAAAB	amr account e koto taka
+PEgSoBPqkk0IakwPAAAD	/greet
+EO4Ya_sVJTxmfHjjAAAF	/greet
+Elqj5btfQ65GcbdxAAAB	/greet
+9UqlbQKWKSE3AK_MAAAB	hi
+BHXIrqmuHu4w5TkfAAAD	/greet
+BHXIrqmuHu4w5TkfAAAD	hi
+BCmK0KhYlnI8WvOtAAAB	hi
+ixzDL6GlNzVZHKjWAAAB	hi
+f6bvm_NDNrFejo46AAAB	hi
+sh9psmahbYbwbSrbAAAB	/greet
+sh9psmahbYbwbSrbAAAB	hi
+bwFzkirB46PSFscQAAAB	hi
+XYYO0_nS0r2SeYsJAAAB	hi
+XYYO0_nS0r2SeYsJAAAB	আমর অ্যাকাউন্ট তাকা কত 
+XYYO0_nS0r2SeYsJAAAB	আমর অ্যাকাউন্ট টাকা  কত 
+XYYO0_nS0r2SeYsJAAAB	আমর ব্যাল্যান্সে কত 
+XYYO0_nS0r2SeYsJAAAB	আমার ব্যালেন্স কি?
+1taAi5smbjoOyVGLAAAD	/greet
+1taAi5smbjoOyVGLAAAD	আমর ব্যাল্যান্সে কত 
+DUuBWd6oJyqHjSdOAAAB	আমর ব্যাল্যান্সে কত
+zNSeaRYFW1cmBqyzAAAB	/greet
+zNSeaRYFW1cmBqyzAAAB	hi
+zNSeaRYFW1cmBqyzAAAB	আমর ব্যাল্যান্সে কত 
+zNSeaRYFW1cmBqyzAAAB	১২৩৪৬৫৭৮
+sxyzZ7rFfxzFsUt4AAAD	/greet
+sxyzZ7rFfxzFsUt4AAAD	আমর ব্যাল্যান্সে কত 
+sxyzZ7rFfxzFsUt4AAAD	১২৩৪৬৫৭৮
+5WhAjb29RMUOUHi7AAAB	আমর ব্যাল্যান্সে কত
+5WhAjb29RMUOUHi7AAAB	১২৩৪৬৫৭৮
+5WhAjb29RMUOUHi7AAAB	ye
+5WhAjb29RMUOUHi7AAAB	১২৩৪
+5WhAjb29RMUOUHi7AAAB	yes
+Sd1rT2ErFazD9jzYAAAD	/greet
+Sd1rT2ErFazD9jzYAAAD	আমর ব্যাল্যান্সে কত 
+Sd1rT2ErFazD9jzYAAAD	১২৩৪৬৫৭৮
+Sd1rT2ErFazD9jzYAAAD	yes
+Sd1rT2ErFazD9jzYAAAD	১২৩৪
+Sd1rT2ErFazD9jzYAAAD	yes
+K0GXinWFcVufbyL0AAAB	/greet
+K0GXinWFcVufbyL0AAAB	amar acoount a koto taka ache
+I_PQYHgeWO6xrFr_AAAB	amar acoount a koto taka ache
+ATumLNgLnXFgoyXIAAAB	amar acoount a koto taka ache
+ATumLNgLnXFgoyXIAAAB	12346578
+ATumLNgLnXFgoyXIAAAB	yes
+ATumLNgLnXFgoyXIAAAB	1234
+ATumLNgLnXFgoyXIAAAB	yes
+ATumLNgLnXFgoyXIAAAB	bkash e taka pathabo
+ATumLNgLnXFgoyXIAAAB	01558666739
+ATumLNgLnXFgoyXIAAAB	yes
+ATumLNgLnXFgoyXIAAAB	1520
+ATumLNgLnXFgoyXIAAAB	yes
+ATumLNgLnXFgoyXIAAAB	amr koto taka ase
+ATumLNgLnXFgoyXIAAAB	1234
+ATumLNgLnXFgoyXIAAAB	yes
+ATumLNgLnXFgoyXIAAAB	ok thank u
+ATumLNgLnXFgoyXIAAAB	koyta baje
+ATumLNgLnXFgoyXIAAAB	apnader thikana kothai
+xqPNN4VEe8-zFeHxAAAD	/greet
+DPln__XhpIxnKyoMAAAB	/greet
+DPln__XhpIxnKyoMAAAB	amr koto taka ase
+DPln__XhpIxnKyoMAAAB	1234678
+DPln__XhpIxnKyoMAAAB	12365478
+DPln__XhpIxnKyoMAAAB	yes
+DPln__XhpIxnKyoMAAAB	1256
+DPln__XhpIxnKyoMAAAB	yes
+n6Kt14J9bre2D1sNAAAB	hi
+mDG7ma1CCMDemYcPAAAD	/greet
+OJU95ltAiQFCRk42AAAF	/greet
+jBIJ2LsiLJ6RcvKTAAAH	/greet
+jBIJ2LsiLJ6RcvKTAAAH	amar account a koto taka ache?
+jBIJ2LsiLJ6RcvKTAAAH	9865458
+jBIJ2LsiLJ6RcvKTAAAH	87976543
+jBIJ2LsiLJ6RcvKTAAAH	yes 
+jBIJ2LsiLJ6RcvKTAAAH	4545
+jBIJ2LsiLJ6RcvKTAAAH	yes
+SOh3emP4MApxMdnLAAAJ	/greet
+jBIJ2LsiLJ6RcvKTAAAH	amar credit card r limit koto?
+jBIJ2LsiLJ6RcvKTAAAH	8765983856
+jBIJ2LsiLJ6RcvKTAAAH	yes
+jBIJ2LsiLJ6RcvKTAAAH	6678
+jBIJ2LsiLJ6RcvKTAAAH	ha
+jBIJ2LsiLJ6RcvKTAAAH	yes
+CQrV602-QNDZ6sCjAAAL	/greet
+CQrV602-QNDZ6sCjAAAL	আমার বালাঞ্চ কত
+CQrV602-QNDZ6sCjAAAL	balance
+CQrV602-QNDZ6sCjAAAL	balance
+CQrV602-QNDZ6sCjAAAL	আমার বালাঞ্চে কত
+CQrV602-QNDZ6sCjAAAL	আমার বালাঞ্চে কত
+huKZ6XXLNBDGhRQIAAAB	/greet
+cCeZheurwd6cK0FFAAAB	/greet
+cCeZheurwd6cK0FFAAAB	amar account balance koto?
+cCeZheurwd6cK0FFAAAB	৭৬৫৮৯৭৬৫
+cCeZheurwd6cK0FFAAAB	৬৫৭৮৯০৬৫
+cCeZheurwd6cK0FFAAAB	76548976
+cCeZheurwd6cK0FFAAAB	ঠিক আছে
+cCeZheurwd6cK0FFAAAB	হ্যাঁ
+cCeZheurwd6cK0FFAAAB	yes
+cCeZheurwd6cK0FFAAAB	6787
+76WP1Tbylbjv4ueLAAAD	/greet
+76WP1Tbylbjv4ueLAAAD	ার
+76WP1Tbylbjv4ueLAAAD	আমার
+76WP1Tbylbjv4ueLAAAD	অ্যাকাউন্ট এ কত টাকা আছে 
+76WP1Tbylbjv4ueLAAAD	৭৬৮৯৭৬৫৪
+76WP1Tbylbjv4ueLAAAD	৬৭৮৯
+76WP1Tbylbjv4ueLAAAD	হা 
+76WP1Tbylbjv4ueLAAAD	হ্যাঁ ঠিক আছে 
+76WP1Tbylbjv4ueLAAAD	৭৮৭৬
+76WP1Tbylbjv4ueLAAAD	yes
+76WP1Tbylbjv4ueLAAAD	amar credit card limit koto
+76WP1Tbylbjv4ueLAAAD	8765985438
+76WP1Tbylbjv4ueLAAAD	yes
+76WP1Tbylbjv4ueLAAAD	6789
+76WP1Tbylbjv4ueLAAAD	হ্যাঁ ঠিক আছে 
+76WP1Tbylbjv4ueLAAAD	বিকাশ transfer করব 
+76WP1Tbylbjv4ueLAAAD	০১৭১৪০১৬৪৫৮
+76WP1Tbylbjv4ueLAAAD	ইয়েস
+76WP1Tbylbjv4ueLAAAD	৬৭৮
+76WP1Tbylbjv4ueLAAAD	ইয়েস
+76WP1Tbylbjv4ueLAAAD	জি না
+76WP1Tbylbjv4ueLAAAD	ধন্যবাদ
+76WP1Tbylbjv4ueLAAAD	ব্যে
+76WP1Tbylbjv4ueLAAAD	bye
+cx3LE6yOOCX3qMFCAAAH	/greet
+HIHpTAXVLfjq_4-EAAAB	/greet
+HIHpTAXVLfjq_4-EAAAB	আমার বালাঞ্চে কত
+Y1S6T0BdQicGMa8uAAAB	/greet
+Y1S6T0BdQicGMa8uAAAB	amr account e koto taka ase
+Y1S6T0BdQicGMa8uAAAB	12346578
+Y1S6T0BdQicGMa8uAAAB	ha
+Y1S6T0BdQicGMa8uAAAB	yes
+Y1S6T0BdQicGMa8uAAAB	1234
+Y1S6T0BdQicGMa8uAAAB	ha
+fRx8FaLeanLN_23aAAAD	/greet
+NXNCwQxjYWbJO4cKAAAF	/greet
+FF-Ur-dcT_2uRY8MAAAD	/greet
+FF-Ur-dcT_2uRY8MAAAD	amr account e koto taka ase
+FF-Ur-dcT_2uRY8MAAAD	12365478
+FF-Ur-dcT_2uRY8MAAAD	ha
+cQQdZ-wW7YaAlhliAAAB	/greet
+cQQdZ-wW7YaAlhliAAAB	বিকাশ করব
+v_BVWesUm_CwazowAAAF	/greet
+cQQdZ-wW7YaAlhliAAAB	12345678
+v_BVWesUm_CwazowAAAF	amr accoutn e koto taka ase
+cQQdZ-wW7YaAlhliAAAB	45215487
+v_BVWesUm_CwazowAAAF	12365478
+v_BVWesUm_CwazowAAAF	ha
+v_BVWesUm_CwazowAAAF	1234
+v_BVWesUm_CwazowAAAF	হ্যা
+v_BVWesUm_CwazowAAAF	amr accoutn e ktoo taka ase
+v_BVWesUm_CwazowAAAF	ha
+v_BVWesUm_CwazowAAAF	bkash trabsfer korbo
+v_BVWesUm_CwazowAAAF	0155666739
+v_BVWesUm_CwazowAAAF	12365478
+v_BVWesUm_CwazowAAAF	01558666739
+v_BVWesUm_CwazowAAAF	ha
+v_BVWesUm_CwazowAAAF	2568
+v_BVWesUm_CwazowAAAF	ha
+u7Tl8Gu93Hx706zmAAAD	/greet
+DSeuHtyf8KJNF1zsAAAD	/greet
+ugNc_2GUJdK3lWACAAAF	/greet
+DSeuHtyf8KJNF1zsAAAD	what is my bank account
+DSeuHtyf8KJNF1zsAAAD	what is my balance
+DSeuHtyf8KJNF1zsAAAD	no
+DSeuHtyf8KJNF1zsAAAD	what is my balance
+
+Cj49Pe7jBlDIYGaeAAAH	/greet
+Cj49Pe7jBlDIYGaeAAAH	hi
+Cj49Pe7jBlDIYGaeAAAH	my current account balance
+Cj49Pe7jBlDIYGaeAAAH	balance
+Cj49Pe7jBlDIYGaeAAAH	12365478
+Cj49Pe7jBlDIYGaeAAAH	12365478 account number
+okP1gPRuFySQrqlFAAAJ	/greet
+okP1gPRuFySQrqlFAAAJ	amr balance koto
+okP1gPRuFySQrqlFAAAJ	12346578
+okP1gPRuFySQrqlFAAAJ	ha
+xNG8GM7qgLK7X87WAAAD	/greet
+xNG8GM7qgLK7X87WAAAD	amr balance kott
+xNG8GM7qgLK7X87WAAAD	12345678
+xNG8GM7qgLK7X87WAAAD	ha
+xNG8GM7qgLK7X87WAAAD	1234 
+xNG8GM7qgLK7X87WAAAD	ha
+wX4riw5hTZVRfnSfAAAF	/greet
+uNmHaENU7IB6syT7AAAH	/greet
+uNmHaENU7IB6syT7AAAH	আমার বালাঞ্চে কত
+uNmHaENU7IB6syT7AAAH	what is my balance 
+WbTUrjRLFoBs7dxnAAAJ	/greet
+WbTUrjRLFoBs7dxnAAAJ	Amar credit card ar balance koto?
+WbTUrjRLFoBs7dxnAAAJ	23456789
+WbTUrjRLFoBs7dxnAAAJ	Thik
+WbTUrjRLFoBs7dxnAAAJ	ha
+WbTUrjRLFoBs7dxnAAAJ	1234
+WbTUrjRLFoBs7dxnAAAJ	ha
+WbTUrjRLFoBs7dxnAAAJ	amar account a total koto tk ase
+WbTUrjRLFoBs7dxnAAAJ	4521
+WbTUrjRLFoBs7dxnAAAJ	hae
+WbTUrjRLFoBs7dxnAAAJ	ha
+rJaE2RYF1TZFa8E4AAAN	/greet
+rJaE2RYF1TZFa8E4AAAN	amr account e koto taka ase
+rJaE2RYF1TZFa8E4AAAN	12345678
+Hh6eSn4reHza9MlbAAAR	/greet
+Hh6eSn4reHza9MlbAAAR	আমার balance কত
+Hh6eSn4reHza9MlbAAAR	amar balance koto
+Hh6eSn4reHza9MlbAAAR	৭৮৭৬৪৫৭৮
+Hh6eSn4reHza9MlbAAAR	87608765
+Hh6eSn4reHza9MlbAAAR	yes
+Hh6eSn4reHza9MlbAAAR	8970
+Hh6eSn4reHza9MlbAAAR	হ্যাঁ
+Hh6eSn4reHza9MlbAAAR	ha
+Hh6eSn4reHza9MlbAAAR	বিকাশ করব
+Hh6eSn4reHza9MlbAAAR	01714016458
+Hh6eSn4reHza9MlbAAAR	০১৭১৪০১৬৪৫৮
+Hh6eSn4reHza9MlbAAAR	yes
+Hh6eSn4reHza9MlbAAAR	হ্যাঁ
+Hh6eSn4reHza9MlbAAAR	৭৮০
+Hh6eSn4reHza9MlbAAAR	হ্যাঁ
+Hh6eSn4reHza9MlbAAAR	what is the time now 
+Hh6eSn4reHza9MlbAAAR	balance transfer korbo 
+Hh6eSn4reHza9MlbAAAR	জি 
+Hh6eSn4reHza9MlbAAAR	টাকা পাঠাব
+Hh6eSn4reHza9MlbAAAR	ক্রেডিট কার্ড ব্যাল্যান্স কত 
+Hh6eSn4reHza9MlbAAAR	না 
+Hh6eSn4reHza9MlbAAAR	অ্যাকাউন্ট বালাঞ্চে কত 
+Hh6eSn4reHza9MlbAAAR	আমার অ্যাকাউন্ট বালাঞ্চে কত 
+Hh6eSn4reHza9MlbAAAR	৭৮৯৬
+MBdmZL9oyGEvayuFAAAV	/greet
+MBdmZL9oyGEvayuFAAAV	what is my balance 
+MBdmZL9oyGEvayuFAAAV	76589087
+MBdmZL9oyGEvayuFAAAV	yes 
+MBdmZL9oyGEvayuFAAAV	7890
+MBdmZL9oyGEvayuFAAAV	yes
+MBdmZL9oyGEvayuFAAAV	yes 
+MBdmZL9oyGEvayuFAAAV	বিকাশ করব 
+MBdmZL9oyGEvayuFAAAV	87898765
+MBdmZL9oyGEvayuFAAAV	৭৬৫৪৩৬৭৮
+zB7kJ2FopAgsK24CAAAX	/greet
+rs8VKqs7nlN6z0cAAAAD	/greet
+rs8VKqs7nlN6z0cAAAAD	amar account a koto taka ase
+rs8VKqs7nlN6z0cAAAAD	12345678
+rs8VKqs7nlN6z0cAAAAD	yes
+rs8VKqs7nlN6z0cAAAAD	pin 1234
+rs8VKqs7nlN6z0cAAAAD	naa
+rs8VKqs7nlN6z0cAAAAD	1236
+rs8VKqs7nlN6z0cAAAAD	haa
+rs8VKqs7nlN6z0cAAAAD	বিকাশ পে করব
+rs8VKqs7nlN6z0cAAAAD	01929775897
+rs8VKqs7nlN6z0cAAAAD	ঠিক আছে
+rs8VKqs7nlN6z0cAAAAD	1020
+rs8VKqs7nlN6z0cAAAAD	haa
+rs8VKqs7nlN6z0cAAAAD	amar balance koto
+rs8VKqs7nlN6z0cAAAAD	১২৩৪
+MV9vwEVemPXm5ggKAAAF	ami transfer korbo
+WuYg50WyAHnmGwUJAAAH	ami bkash e taka pathabo
+WuYg50WyAHnmGwUJAAAH	12345678
+WuYg50WyAHnmGwUJAAAH	haa
+WuYg50WyAHnmGwUJAAAH	01558666739
+WuYg50WyAHnmGwUJAAAH	yes
+WuYg50WyAHnmGwUJAAAH	5689
+WuYg50WyAHnmGwUJAAAH	ha
+WuYg50WyAHnmGwUJAAAH	amr account koto taka ase
+WuYg50WyAHnmGwUJAAAH	1234
+WuYg50WyAHnmGwUJAAAH	yes
+tdUdvZ1WZaAKL-vUAAAJ	/greet
+tdUdvZ1WZaAKL-vUAAAJ	amr account e ktoo taka ase
+tdUdvZ1WZaAKL-vUAAAJ	12346578
+tdUdvZ1WZaAKL-vUAAAJ	ye
+tdUdvZ1WZaAKL-vUAAAJ	1344
+tdUdvZ1WZaAKL-vUAAAJ	ha
+UEAVo6n0hl0kGz4BAAAL	/greet
+UEAVo6n0hl0kGz4BAAAL	amar acount balance koto
+UEAVo6n0hl0kGz4BAAAL	22223333
+UEAVo6n0hl0kGz4BAAAL	thik ase
+UEAVo6n0hl0kGz4BAAAL	ha thik ase
+UEAVo6n0hl0kGz4BAAAL	hae
+UEAVo6n0hl0kGz4BAAAL	ha
+UEAVo6n0hl0kGz4BAAAL	2222
+UEAVo6n0hl0kGz4BAAAL	thik ase
+UEAVo6n0hl0kGz4BAAAL	hae thik se
+UEAVo6n0hl0kGz4BAAAL	ha
+UEAVo6n0hl0kGz4BAAAL	ami bkash a taka transfer korte chassi
+UEAVo6n0hl0kGz4BAAAL	01987223344
+UEAVo6n0hl0kGz4BAAAL	ha
+UEAVo6n0hl0kGz4BAAAL	8000
+UEAVo6n0hl0kGz4BAAAL	ha
+UEAVo6n0hl0kGz4BAAAL	akhon amar acount ar balance koto
+UEAVo6n0hl0kGz4BAAAL	2222
+UEAVo6n0hl0kGz4BAAAL	ha
+UEAVo6n0hl0kGz4BAAAL	akhon koyta baje
+UEAVo6n0hl0kGz4BAAAL	apnaar naam ki/
+UEAVo6n0hl0kGz4BAAAL	apnar naam ki?
+UEAVo6n0hl0kGz4BAAAL	apnader head office kothae
+UEAVo6n0hl0kGz4BAAAL	apni kotodin dhore ai office a asen?
+UEAVo6n0hl0kGz4BAAAL	dhonnobaad
+UEAVo6n0hl0kGz4BAAAL	r kono help lagbe na. good bye
+UEAVo6n0hl0kGz4BAAAL	Allah hafez
+UEAVo6n0hl0kGz4BAAAL	bye bye
+UEAVo6n0hl0kGz4BAAAL	amar acount ar balance kot
+UEAVo6n0hl0kGz4BAAAL	2345
+UEAVo6n0hl0kGz4BAAAL	thik ase
+UEAVo6n0hl0kGz4BAAAL	yes
+UEAVo6n0hl0kGz4BAAAL	amar credit card ar balance koto
+UEAVo6n0hl0kGz4BAAAL	2222
+UEAVo6n0hl0kGz4BAAAL	thik ase
+UEAVo6n0hl0kGz4BAAAL	ha thik ase
+UEAVo6n0hl0kGz4BAAAL	ok thik ase
+nUbvsMtaG9MJtuXUAAAB	Amar account ar balance koto/
+vfXbwI1SVqGP5WxuAAAD	/greet
+nUbvsMtaG9MJtuXUAAAB	88889999
+nUbvsMtaG9MJtuXUAAAB	ok
+nUbvsMtaG9MJtuXUAAAB	7777
+vfXbwI1SVqGP5WxuAAAD	amar account balance koto?
+nUbvsMtaG9MJtuXUAAAB	ha
+vfXbwI1SVqGP5WxuAAAD	91349641
+nUbvsMtaG9MJtuXUAAAB	na
+nUbvsMtaG9MJtuXUAAAB	thank you
+vfXbwI1SVqGP5WxuAAAD	ha thik asche 
+vfXbwI1SVqGP5WxuAAAD	ha 
+vfXbwI1SVqGP5WxuAAAD	yes 
+vfXbwI1SVqGP5WxuAAAD	5694
+vfXbwI1SVqGP5WxuAAAD	yes
+vfXbwI1SVqGP5WxuAAAD	what is my credit card limit
+vfXbwI1SVqGP5WxuAAAD	9134964122
+vfXbwI1SVqGP5WxuAAAD	yes
+vfXbwI1SVqGP5WxuAAAD	5694
+vfXbwI1SVqGP5WxuAAAD	yes
+nUbvsMtaG9MJtuXUAAAB	amar acc bal koto
+nUbvsMtaG9MJtuXUAAAB	9o889898
+nUbvsMtaG9MJtuXUAAAB	12345678
+vfXbwI1SVqGP5WxuAAAD	বিকাশ করব
+nUbvsMtaG9MJtuXUAAAB	9o09
+nUbvsMtaG9MJtuXUAAAB	ha
+nUbvsMtaG9MJtuXUAAAB	9o09
+vfXbwI1SVqGP5WxuAAAD	০১৭১৪০১৬৪৫৮
+nUbvsMtaG9MJtuXUAAAB	0099
+vfXbwI1SVqGP5WxuAAAD	হ্যাঁ 
+nUbvsMtaG9MJtuXUAAAB	8909808o
+vfXbwI1SVqGP5WxuAAAD	৫৮০
+nUbvsMtaG9MJtuXUAAAB	90909090
+vfXbwI1SVqGP5WxuAAAD	হ্যাঁ 
+nUbvsMtaG9MJtuXUAAAB	4567
+nUbvsMtaG9MJtuXUAAAB	ha thik ase
+nUbvsMtaG9MJtuXUAAAB	thik ase
+nUbvsMtaG9MJtuXUAAAB	ha
+nUbvsMtaG9MJtuXUAAAB	credit card limit barano jabe
+nUbvsMtaG9MJtuXUAAAB	90909090990
+nUbvsMtaG9MJtuXUAAAB	9090909090
+nUbvsMtaG9MJtuXUAAAB	ha
+nUbvsMtaG9MJtuXUAAAB	9090
+nUbvsMtaG9MJtuXUAAAB	ha
+eSHUEZBUqAxyjllwAAAB	/greet
+lm9aydR8UUMhQktIAAAD	/greet
+lm9aydR8UUMhQktIAAAD	একাউন্টে কত টাকা আছে
+mR_1vJEYTXSXT0gyAAAB	/greet
+IU3I-HO91ck3Ssl2AAAD	/greet
+IU3I-HO91ck3Ssl2AAAD	 কেমন আছেন?
+HDzWyoTXIDRJS2GZAAAH	/greet
+d65ChCuYrzCznsOgAAAJ	/greet
+d65ChCuYrzCznsOgAAAJ	aa
+EsuPDkXbQpQuxLKeAAAL	/greet
+EsuPDkXbQpQuxLKeAAAL	ভালো আছেন?
+Wu9fCC-FkAkVUctDAAAB	/greet
+J0YZVR5-fADDrJLvAAAB	/greet
+0ntFtqXvgNEpmJJIAAAB	/greet
+0ntFtqXvgNEpmJJIAAAB	হাই
+0ntFtqXvgNEpmJJIAAAB	আমার একাঊন্টে কত টাকা আছে
+0ntFtqXvgNEpmJJIAAAB	12365478
+0ntFtqXvgNEpmJJIAAAB	হ্যাঁ
+0ntFtqXvgNEpmJJIAAAB	1234
+0ntFtqXvgNEpmJJIAAAB	হ্যাঁ
+0ntFtqXvgNEpmJJIAAAB	সময় কত
+1BXplLuVis0_1_7WAAAD	/greet
+TB_gs0vA8NuaFdp5AAAB	/greet
+TB_gs0vA8NuaFdp5AAAB	হাই
+TB_gs0vA8NuaFdp5AAAB	আমার টাকা কত আছে একাউন্টে
+TB_gs0vA8NuaFdp5AAAB	21326554
+TB_gs0vA8NuaFdp5AAAB	হ্যাঁ
+TB_gs0vA8NuaFdp5AAAB	1234
+TB_gs0vA8NuaFdp5AAAB	হ্যাঁ
+CQsnXehBUba7jsvjAAAD	/greet
+7x7y22x3qjUMDvzOAAAF	/greet
+7x7y22x3qjUMDvzOAAAF	koyta baje
+3stxyC4-vha4YmQKAAAH	/greet
+Ya0JKJ2kZR5Z6wniAAAB	/greet
+W8C-o0A4RoWMg0JzAAAD	/greet
+CsVRIiHKkyYU1J9KAAAF	/greet

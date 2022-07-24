@@ -3,75 +3,89 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- inform:
+    use_entities: []
+- check_balance
+- affirm
+- E_Commerce_Request
+- Loan_Related_Query
+- deny
 - thankyou
 - greet
 - Ask_Time
 - Repeat
-- inform:
-    use_entities: []
 - stop_cheque
 - interrupt
-- affirm
 - campaign
 - check_human
 - Name_meaning
 - Card_Activation
-- deny
 - bKash_transfer
 - goodbye
 - agent_transfer
 - Credit_Card_Limit
 - mood_great
 - out_of_scope
-- check_balance
 - account_activate
 - bot_challenge
 - weather
 - explain
 - Exchange_rate
-- E_Commerce_Request
 - EMI_Query
 - Card_Close
 - Bank_and_ATM_Location
 - BankingQuery
 - help
+- TPIN_Generation
+- Account_Address_Update
 entities:
-- card_check
-- account_check
-- CCV
-- PIN
-- Valid_DATE
-- account_number
-- amount-of-money
-- card_number
-- phone_number
-- cheque_number
-- Father_Name
-- Mother_Name
-- Birth_Date
-- next_form_name
-- Incomplete_Story
-- fallback_counter
-- account_number_confirm
-- card_number_confirm
-- phone_number_confirm
-- cheque_number_confirm
-- amount_confirm
-- PIN_confirm
-- amountBengaliWord
-- NumberInWord
 - ACtext
+- Birth_Date
+- CCV
 - CardText
-- PhoneText
-- PIN_Text
+- Card_Last_Number
 - ChequeNumberWord
-- continue
-- location
-- UserInput
-- Intent_Text
+- Father_Name
+- Incomplete_Story
 - Intent_Name
+- Intent_Text
 - Last_Action_for_Card
+- Mother_Name
+- NumberInWord
+- PIN
+- PIN_Text
+- PIN_confirm
+- PhoneText
+- Relation_to_Nominee
+- UserInput
+- Valid_DATE
+- account_check
+- account_number
+- account_number_confirm
+- amount-of-money
+- amountBengaliWord
+- amount_confirm
+- card_check
+- card_number
+- card_number_confirm
+- cheque_number
+- cheque_number_confirm
+- continue
+- fallback_counter
+- location
+- next_form_name
+- phone_number
+- phone_number_confirm
+- loan_continue
+- House
+- Road
+- town
+- P_S
+- post_code
 slots:
+  loan_continue:
+    type: any
+    influence_conversation: false
   Intent_Name:
     type: any
     influence_conversation: false
@@ -108,6 +122,9 @@ slots:
   Mother_Name:
     type: text
     influence_conversation: false
+  Relation_to_Nominee:
+    type: text
+    influence_conversation: false
   Birth_Date:
     type: text
     influence_conversation: false
@@ -133,6 +150,9 @@ slots:
   CCV:
     type: any
     influence_conversation: false
+  Card_Last_Number:
+    type: any
+    influence_conversation: false
   card_number:
     type: any
     influence_conversation: false
@@ -149,19 +169,19 @@ slots:
     influence_conversation: false
   account_check:
     type: bool
-    initial_value: True
+    initial_value: true
     influence_conversation: false
   card_check:
     type: bool
-    initial_value: True
+    initial_value: true
     influence_conversation: false
   Incomplete_Story:
     type: bool
-    initial_value: False
+    initial_value: false
     influence_conversation: true
   Continue:
     type: bool
-    initial_value: False
+    initial_value: false
     influence_conversation: true
   next_form_name:
     type: text
@@ -170,6 +190,8 @@ slots:
     type: float
     initial_value: 0.0
     influence_conversation: false
+    max_value: 1.0
+    min_value: 0.0
   account_number_confirm:
     type: text
     influence_conversation: false
@@ -186,6 +208,21 @@ slots:
     type: text
     influence_conversation: false
   cheque_number_confirm:
+    type: text
+    influence_conversation: false
+  House:
+    type: text
+    influence_conversation: false
+  Road:
+    type: text
+    influence_conversation: false
+  town:
+    type: text
+    influence_conversation: false
+  P_S:
+    type: text
+    influence_conversation: false
+  post_code:
     type: text
     influence_conversation: false
 responses:
@@ -234,13 +271,13 @@ responses:
   - text: হ্যালো স্যার, আমাদের কাস্টমার কেয়ারে কল করার জন্য ধন্যবাদ। আমি দিশা বলছি। আপনাকে কিভাবে সহায়তা করতে পারি।
   - text: হ্যালো স্যার, আশা করি ভাল আছেন। দিশা বলছি। কিভাবে আপনাকে সহায়তা করতে পারি
   utter_greet_morning:
-  - text: শুভো সকাল, ওয়েলকাম টু ইস্টার্ন ব্যাংক। আমি দিশা। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
+  - text: শুভো সকাল, ওয়েলকাম টু {Bank_Name}। আমি দিশা বলছি। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
   utter_greet_afternoon:
-  - text: শুভো বিকেল, ওয়েলকাম টু ইস্টার্ন ব্যাংক। দিশা বলছি। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
+  - text: শুভো বিকেল, ওয়েলকাম টু {Bank_Name}। আমি দিশা বলছি। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
   utter_greet_evening:
-  - text: শুভো সন্ধ্যা, ওয়েলকাম টু ইস্টার্ন ব্যাংক। দিশা বলছি। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
+  - text: শুভো সন্ধ্যা, ওয়েলকাম টু {Bank_Name}। আমি দিশা বলছি। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
   utter_greet_night:
-  - text: শুভো রাত্রি, ওয়েলকাম টু ইস্টার্ন ব্যাংক। আমি দিশা। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
+  - text: শুভো রাত্রি, ওয়েলকাম টু {Bank_Name}। আমি দিশা বলছি। আপনার ভার্চুয়াল অ্যাসিস্ট্যান্ট। আপনাকে কিভাবে সহায়তা করতে পারি?
   utter_ask_whatelse:
   - text: আমি আপনাকে কিভাবে সহায়তা করতে পারি?
   utter_interrupt:
@@ -314,10 +351,14 @@ responses:
   - text: স্যার, আপনার বিকাশ মোবাইল, নাম্বারটি দিয়ে আমাকে সাহায্য করুন
   utter_ask_amount-of-money:
   - text: টাকার পরিমাণ বলুন
+  utter_ask_Card_Last_Number:
+  - text: আপনার কার্ড এর লাস্ট তিন ডিজিট বলুন
   utter_denied:
   - text: আপনার অনুরোধে, আমি আপনার কাজটি বন্ধ করেছি।  আপনি চাইলে পুনরায় প্রক্রিয়াটি সম্পন্ন করতে পারবেন।
   utter_invalidAMOUNT:
   - text: টাকার পরিমাণ সঠিক নয়।
+  utter_invalid_Card_Last_Number:
+  - text: সঠিক নয়। সঠিক ডিজিট বলুন
   utter_invalidNAME:
   - text: দুঃখিত, সঠিক নাম বলুন
   utter_invalidCHEQUEnumber:
@@ -370,7 +411,7 @@ responses:
   utter_explain_pin:
   - text: যাচাইকরণের জন্য, আমাদের আপনার পিন নম্বর প্রয়োজন।
   utter_exchange_USD:
-  - text: আজকের রেট হচ্ছে পঁচাশি টাকা বাহাত্তর পয়সা।
+  - text: আজকের রেট হচ্ছে তিরানব্বই টাকা সাতান্ন পয়সা।
   utter_cheque_cancel_confirmed:
   - text: আপনার চেকটি বাতিল করা হয়েছে। ধন্যবাদ, আমি কি আপনাকে আর কোন সহায়তা করতে পারি?
   utter_card_activation:
@@ -385,14 +426,17 @@ responses:
   utter_ask_Mother_Name:
   - text: আপনার মায়ের নাম বলুন
   - text: আপনার মায়ের নাম কি
-  - text: এবং আপনার মায়ের নাম 
+  - text: এবং আপনার মায়ের নাম
+  utter_ask_Relation_to_Nominee:
+  - text: নমিনির সাথে আপনার সম্পর্ক কি
+  - text: নমিনি আপনার কে হয়
   utter_ask_Birth_Date:
   - text: আপনার জন্ম তারিখ বলুন
   - text: স্যার, আপনার জন্মতারিখ বলুন
   utter_card_close_done:
   - text: ধন্যবাদ। আপনার কার্ডটি বন্ধ করে দেয়া হয়েছে। আমি কি আপনার জন্য আর কিছু করতে পারি
   utter_bank_location:
-  - text: আমাদের ব্যাংকের হেড অফিস হচ্ছে গুলশান দুই এ। এছাড়া বনানী, বারিধারা এবং মিরপুরেও আমাদের শাখা আছে। আমি কি আপনাকে আর কোন সহায়তা করতে পারি?
+  - text: আমাদের ব্যাংকের হেড অফিস হচ্ছে গুলশান এক এ। এছাড়া বনানী, বারিধারা এবং মিরপুরেও আমাদের শাখা আছে। আমি কি আপনাকে আর কোন সহায়তা করতে পারি?
   utter_bank_location_mirpur:
   - text: মিরপুর এ ব্লক এ অবস্থিত। এবং রাউটিং নাম্বার হচ্ছে জিরো, নাইন, ফাইভ, টু, সিক্স, টু, নাইন, এইট, ফাইভ। আমি কি আপনাকে আর কোন সহায়তা করতে পারি?
   utter_bank_location_gulshan:
@@ -418,39 +462,69 @@ responses:
   utter_ask_PIN_confirm:
   - text: আপনি পিন নাম্বার বলেছেন {PIN_Text}. সেটা ঠিক হলে বলুন, হ্যাঁ ঠিক আছে।
   utter_ask_amount_confirm:
-  - text: আপনি বলেছেন {amountBengaliWord} টাকা. সেটা ঠিক হলে বলুন, হ্যাঁ ঠিক আছে।
+  - text: আপনি বলেছেন {amountBengaliWord}. সেটা ঠিক হলে বলুন, হ্যাঁ ঠিক আছে।
   utter_ask_cheque_number_confirm:
   - text: আপনি চেক নাম্বার বলেছেন {ChequeNumberWord}. সেটা ঠিক হলে বলুন, হ্যাঁ ঠিক আছে।
+  utter_TPIN_Generation:
+  - text: আপনার কলটি ট্রান্সফার করা হচ্ছে একটি স্মার্ট আইভিআর এর কাছে, যেখানে আপনি আপনার টিপিন জেনারেট করতে পারবেন।
+  utter_ask_loan_continue:
+  - text: আপনি কি, লোন ডিউ, কত টাকা বাকি আছে বা পরবর্তী কিস্তি কত দিবেন তা জানতে চাচ্ছেন।
+  utter_installment_details:
+  - text: আপনার আগামি মাসের ইন্সটল্মেন্ট হচ্ছে পনের হাজার টাকা। আর কিছু কি জানতে চাচ্ছেন।
+  utter_loan_due:
+  - text: আপনার এখনও বাকি আছে পঁয়তাল্লিশ হাজার টাকা। আগামী তিন মাসে আপনাকে তা পরিশোধ করতে হবে নইলে জরিমানা সহ দিতে হবে। আমি কি আপনাকে আর কোন সহায়তা করতে পারি?
+  utter_loan_info_not_available:
+  - text: দুঃখিত, আমি আপনাকে এই মুহূর্তে কোন ধরনের সহায়তা করতে পারছি না। আমি কল টি এক জন কাস্টমার কেয়ার প্রতিনিধির কাছে ট্রান্সফার করছি, একটু অপেক্ষা করুন।
+  utter_ask_House:
+  - text: স্যার, আপনার হাউজ নাম্বার, বলুন
+  utter_ask_Road:
+  - text: স্যার, আপনার রোড নাম্বার, বলুন
+  utter_ask_town:
+  - text: আপনার টাউন এবং সিটির নাম বলুন
+  utter_ask_P_S:
+  - text: আপনার থানা কোথায়
+  utter_ask_post_code:
+  - text: আপনার, পোস্টাল কোড বলুন
+  utter_invalid_information:
+  - text: দুঃখিত, তথ্যটি সঠিক নয়
+  utter_Account_updated_info_stored:
+  - text: ধন্যবাদ। আপনার তথ্য গুলো আমি রেখেছি, এবং আপডেট করার আগে আমদের একজন এজেন্ট আপনার সাথে যোগাযোগ করবে। আমি কি আপনাকে আর কোন সহায়তা করতে পারি?
 actions:
-- action_weather
-- Action_Repeat
-- action_interrupt
-- action_reset_all_slots
 - Action_Card_limit_info
 - Action_Current_DateTime
+- Action_Repeat
 - Action_out_of_scope
-- action_card_activation
-- action_ask_continue
-- action_continue_response
-- action_OK
-- action_card_close_done
-- action_reset_Card_Activation_Info
-- action_E_Commerce_Request
 - action_Card_Close
-- action_utter_transfer
+- action_Loan_info
+- action_Share_Loan_Details
+- action_Cheque_Cancel
+- action_E_Commerce_Request
+- action_OK_eCommerce
+- action_ask_continue
+- action_bank_location
+- action_card_activation
+- action_card_close_done
+- action_continue_response
 - action_custom_fallback
 - action_greet
+- action_interrupt
 - action_reset_BkashTransectionVALUES
-- action_reset_PINandACnumer
+- action_reset_Card_Activation_Info
 - action_reset_ChequeANDamount
+- action_reset_PINandACnumer
 - action_reset_PINandCARDnumer
+- action_reset_all_slots
+- action_Account_Address_Update
+- action_Account_Address_Update_Done
 - action_show_balance
-- action_Cheque_Cancel
-- action_bank_location
+- action_utter_transfer
+- action_weather
 - utter_AT
+- utter_Card_Close
 - utter_Disha
-- utter_help
+- utter_E_Commerce_Request
 - utter_Out_of_scope_funny_1
+- utter_Out_of_scope_funny_10
 - utter_Out_of_scope_funny_2
 - utter_Out_of_scope_funny_3
 - utter_Out_of_scope_funny_4
@@ -459,72 +533,85 @@ actions:
 - utter_Out_of_scope_funny_7
 - utter_Out_of_scope_funny_8
 - utter_Out_of_scope_funny_9
-- utter_Out_of_scope_funny_10
 - utter_Out_of_scope_funny_Alexa
-- utter_Out_of_scope_funny_Siri
 - utter_Out_of_scope_funny_Cortana
-- utter_ask_amount-of-money
-- utter_ask_card_number
-- utter_ask_phone_number
-- utter_ask_cheque_number
+- utter_Out_of_scope_funny_Siri
+- utter_ask_Birth_Date
+- utter_ask_Card_Last_Number
 - utter_ask_Father_Name
 - utter_ask_Mother_Name
-- utter_ask_Birth_Date
-- utter_ask_account_number_confirm
-- utter_ask_phone_number_confirm
-- utter_ask_card_number_confirm
 - utter_ask_PIN_confirm
+- utter_ask_Relation_to_Nominee
+- utter_ask_account_number_confirm
+- utter_ask_amount-of-money
 - utter_ask_amount_confirm
+- utter_ask_card_number
+- utter_ask_card_number_confirm
+- utter_ask_cheque_number
 - utter_ask_cheque_number_confirm
+- utter_ask_continue
+- utter_ask_continue_form
+- utter_ask_phone_number
+- utter_ask_phone_number_confirm
 - utter_ask_somethingelse
 - utter_ask_whatelse
+- utter_ask_House
+- utter_ask_Road
+- utter_ask_town
+- utter_ask_P_S
+- utter_ask_post_code
+- utter_bank_location
+- utter_bank_location_Shamoli
+- utter_bank_location_banani
+- utter_bank_location_baridhara
+- utter_bank_location_gulshan
+- utter_bank_location_mirpur
+- utter_card_activation
 - utter_card_balance
+- utter_card_close_done
 - utter_card_info
 - utter_card_limit
 - utter_card_outstanding
+- utter_cheque_cancel_confirmed
 - utter_default
-- utter_dependent_intent_response
 - utter_denied
-- utter_interrupt
+- utter_dependent_intent_response
 - utter_done
 - utter_exchange_USD
 - utter_explain
+- utter_ask_loan_continue
+- utter_installment_details
+- utter_loan_due
+- utter_loan_info_not_available
 - utter_explain_account_number
+- utter_explain_and_continue
 - utter_explain_card_number
 - utter_explain_pin
-- utter_explain_and_continue
-- utter_weather_query
 - utter_goodbye
 - utter_greet
-- utter_card_activation
-- utter_E_Commerce_Request
-- utter_Card_Close
-- utter_card_close_done
+- utter_help
+- utter_interrupt
 - utter_invalidAMOUNT
+- utter_invalidBDATE
 - utter_invalidCARDnumber
-- utter_invalidphone
 - utter_invalidCHEQUEnumber
 - utter_invalidNAME
-- utter_invalidBDATE
+- utter_invalidphone
+- utter_invalid_information
+- utter_no_story
 - utter_thanks
 - utter_transfer
-- utter_no_story
-- utter_bank_location
-- utter_bank_location_mirpur
-- utter_bank_location_gulshan
-- utter_bank_location_Shamoli
-- utter_bank_location_baridhara
-- utter_bank_location_banani
-- utter_ask_continue_form
-- utter_ask_continue
-- utter_cheque_cancel_confirmed
-- validate_bKash_form
+- utter_weather_query
+- utter_TPIN_Generation
 - validate_Card_Activation_form
 - validate_Card_DeActivation_form
 - validate_Credit_card_limit_form
+- validate_bKash_form
 - validate_check_balance_form
 - validate_cheque_form
 - validate_e_commerce_form
+- validate_Loan_Quary_form
+- validate_Address_Update_form
 forms:
   check_balance_form:
     required_slots:
@@ -540,7 +627,6 @@ forms:
       PIN_confirm:
       - entity: PIN_confirm
         type: from_text
-
   bKash_form:
     required_slots:
       account_number:
@@ -561,7 +647,6 @@ forms:
       amount_confirm:
       - entity: amount_confirm
         type: from_text
-
   Card_Activation_form:
     required_slots:
       card_number:
@@ -576,16 +661,9 @@ forms:
       account_number_confirm:
       - entity: account_number_confirm
         type: from_text
-      # Father_Name:
-      # - entity: Father_Name
-      #   type: from_text
-      # Mother_Name:
-      # - entity: Mother_Name
-      #   type: from_text
       Birth_Date:
       - entity: Birth_Date
         type: from_text
-
   Card_DeActivation_form:
     required_slots:
       card_number:
@@ -594,16 +672,9 @@ forms:
       card_number_confirm:
       - entity: card_number_confirm
         type: from_text
-      # Father_Name:
-      # - entity: Father_Name
-      #   type: from_text
-      # Mother_Name:
-      # - entity: Mother_Name
-      #   type: from_text
       Birth_Date:
       - entity: Birth_Date
         type: from_text
-
   Credit_card_limit_form:
     required_slots:
       card_number:
@@ -618,7 +689,6 @@ forms:
       PIN_confirm:
       - entity: PIN_confirm
         type: from_text
-
   cheque_form:
     required_slots:
       cheque_number:
@@ -633,15 +703,42 @@ forms:
       amount_confirm:
       - entity: amount_confirm
         type: from_text
-
   e_commerce_form:
     required_slots:
-      Father_Name:
-      - entity: Father_Name
+      Birth_Date:
+      - entity: Birth_Date
         type: from_text
-      Mother_Name:
-      - entity: Mother_Name
+      Card_Last_Number:
+      - entity: Card_Last_Number
+        type: from_entity
+      Relation_to_Nominee:
+      - entity: Relation_to_Nominee
+        type: from_entity
+  Loan_Quary_form:
+    required_slots:
+      loan_continue:
+      - entity: loan_continue
         type: from_text
       Birth_Date:
       - entity: Birth_Date
         type: from_text
+      Relation_to_Nominee:
+      - entity: Relation_to_Nominee
+        type: from_entity
+  Address_Update_form:
+    required_slots:
+      House:
+      - entity: House
+        type: from_entity
+      Road:
+      - entity: Road
+        type: from_entity
+      town:
+      - entity: town
+        type: from_text
+      P_S:
+      - entity: P_S
+        type: from_text
+      post_code:
+      - entity: post_code
+        type: from_entity

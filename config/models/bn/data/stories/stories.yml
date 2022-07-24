@@ -22,44 +22,209 @@ stories:
   - intent: interrupt
   - action: action_interrupt
 
-# - story: story of E_Commerce_Request
-#   steps:
-#   - intent: E_Commerce_Request
-#   - action: action_E_Commerce_Request
-#   - action: e_commerce_form
-#   - active_loop: e_commerce_form
-#   - slot_was_set:
-#     - requested_slot: Father_Name
-#   - slot_was_set:
-#     - requested_slot: Mother_Name
-#   - slot_was_set:
-#     - requested_slot: Birth_Date
-#   - slot_was_set:
-#     - requested_slot: null
-#   - active_loop: null
-#   - action: action_OK
+- story: story of E_Commerce_Request and TPIN_Generation
+  steps:
+  - or:
+    - intent: E_Commerce_Request
+    - intent: TPIN_Generation
+  - action: action_E_Commerce_Request
+  - action: e_commerce_form
+  - active_loop: e_commerce_form
+  - slot_was_set:
+    - requested_slot: Birth_Date
+  - slot_was_set:
+    - requested_slot: Card_Last_Number
+  - slot_was_set:
+    - requested_slot: Relation_to_Nominee
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_OK_eCommerce
 
-# - story: Other intent in the middle of E_Commerce_Request
-#   steps:
-#   - intent: E_Commerce_Request
-#   - action: action_E_Commerce_Request
-#   - action: e_commerce_form
-#   - active_loop: e_commerce_form
-#   - or:
-#     - intent: check_balance 
-#     - intent: weather
-#     - intent: bKash_transfer
-#     - intent: Card_Close
-#     - intent: explain
-#   - action: action_ask_continue
-#   - slot_was_set:
-#     - Continue: true
-#   - or:
-#     - intent: affirm
-#     - intent: deny
-#   - action: action_continue_response
-#   - slot_was_set:
-#     - Continue: false
+- story: Other intent in the middle of E_Commerce_Request/TPIN_Generation
+  steps:
+  - or:
+    - intent: E_Commerce_Request
+    - intent: TPIN_Generation
+  - action: action_E_Commerce_Request
+  - action: e_commerce_form
+  - active_loop: e_commerce_form
+  - or:
+    - intent: check_balance 
+    - intent: weather
+    - intent: bKash_transfer
+    - intent: Card_Close
+    - intent: explain
+  - action: action_ask_continue
+  - slot_was_set:
+    - Continue: true
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: action_continue_response
+  - slot_was_set:
+    - Continue: false
+
+- story: interactive_story of E_Commerce_Request/TPIN_Generation
+  steps:
+  - or:
+    - intent: E_Commerce_Request
+    - intent: TPIN_Generation
+  - action: action_E_Commerce_Request
+  - slot_was_set:
+    - Father_Name: null
+  - slot_was_set:
+    - Mother_Name: null
+  - slot_was_set:
+    - Birth_Date: null
+  - slot_was_set:
+    - Card_Last_Number: null
+  - slot_was_set:
+    - Relation_to_Nominee: null
+  - slot_was_set:
+    - Incomplete_Story: true
+  - action: e_commerce_form
+  - active_loop: e_commerce_form
+  - slot_was_set:
+    - requested_slot: Birth_Date
+  - slot_was_set:
+    - Birth_Date: 01/02/1994
+  - slot_was_set:
+    - Birth_Date: 01/02/1994
+  - slot_was_set:
+    - requested_slot: Card_Last_Number
+  - slot_was_set:
+    - Card_Last_Number: '548'
+  - slot_was_set:
+    - Card_Last_Number: '548'
+  - slot_was_set:
+    - requested_slot: Relation_to_Nominee
+  - slot_was_set:
+    - Relation_to_Nominee: মা
+  - slot_was_set:
+    - Relation_to_Nominee: মা
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_OK_eCommerce
+  - slot_was_set:
+    - Incomplete_Story: false
+  - slot_was_set:
+    - Card_Last_Number: null
+  - slot_was_set:
+    - Relation_to_Nominee: null
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+
+- story: interactive_story to handle other intent in the middle of E_Commerce_Request/TPIN_Generation, deny
+  steps:
+  - or:
+    - intent: E_Commerce_Request
+    - intent: TPIN_Generation
+  - action: action_E_Commerce_Request
+  - slot_was_set:
+    - Father_Name: null
+  - slot_was_set:
+    - Mother_Name: null
+  - slot_was_set:
+    - Birth_Date: null
+  - slot_was_set:
+    - Card_Last_Number: null
+  - slot_was_set:
+    - Relation_to_Nominee: null
+  - slot_was_set:
+    - Incomplete_Story: true
+  - action: e_commerce_form
+  - active_loop: e_commerce_form
+  - slot_was_set:
+    - requested_slot: Birth_Date
+  - or:
+    - intent: check_balance 
+    - intent: weather
+    - intent: bKash_transfer
+    - intent: Card_Close
+    - intent: explain
+  - action: action_ask_continue
+  - slot_was_set:
+    - Continue: true
+  - intent: deny
+  - action: action_continue_response
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - Incomplete_Story: false
+  - slot_was_set:
+    - Continue: false
+
+- story: interactive_story to handle other intent in the middle of E_Commerce_Request/TPIN_Generation, affirm
+  steps:
+  - or:
+    - intent: E_Commerce_Request
+    - intent: TPIN_Generation
+  - action: action_E_Commerce_Request
+  - slot_was_set:
+    - Father_Name: null
+  - slot_was_set:
+    - Mother_Name: null
+  - slot_was_set:
+    - Birth_Date: null
+  - slot_was_set:
+    - Card_Last_Number: null
+  - slot_was_set:
+    - Relation_to_Nominee: null
+  - slot_was_set:
+    - Incomplete_Story: true
+  - action: e_commerce_form
+  - active_loop: e_commerce_form
+  - slot_was_set:
+    - requested_slot: Birth_Date
+  - or:
+    - intent: check_balance 
+    - intent: weather
+    - intent: bKash_transfer
+    - intent: Card_Close
+    - intent: explain
+  - action: action_ask_continue
+  - slot_was_set:
+    - Continue: true
+  - intent: affirm
+  - action: action_continue_response
+  - slot_was_set:
+    - Continue: false
+  - action: e_commerce_form
+  - slot_was_set:
+    - requested_slot: Birth_Date
+  - slot_was_set:
+    - Birth_Date: 01/02/1994
+  - slot_was_set:
+    - Birth_Date: 01/02/1994
+  - slot_was_set:
+    - requested_slot: Card_Last_Number
+  - slot_was_set:
+    - Card_Last_Number: '457'
+  - slot_was_set:
+    - Card_Last_Number: '457'
+  - slot_was_set:
+    - requested_slot: Relation_to_Nominee
+  - slot_was_set:
+    - Relation_to_Nominee: বোন
+  - slot_was_set:
+    - Relation_to_Nominee: বোন
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_OK_eCommerce
+  - slot_was_set:
+    - Incomplete_Story: false
+  - slot_was_set:
+    - Card_Last_Number: null
+  - slot_was_set:
+    - Relation_to_Nominee: null
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
 
 
 - story: story of stop_cheque
@@ -1465,3 +1630,118 @@ stories:
     - card_number: null
 
 
+- story: story of Loan_Related_Query, affirm or deny
+  steps:
+    - intent: Loan_Related_Query
+    - action: action_Loan_info
+    - action: Loan_Quary_form
+    - active_loop: Loan_Quary_form
+    - slot_was_set: 
+      - requested_slot: loan_continue
+    - slot_was_set:
+      - loan_continue: affirm
+    - slot_was_set:
+      - requested_slot: Birth_Date
+    - slot_was_set:
+      - requested_slot: Relation_to_Nominee
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_Share_Loan_Details
+
+# - story: Other intent in the middle of Loan_Related_Query
+#   steps:
+#   - intent: Loan_Related_Query
+#   - action: action_Loan_info
+#   - action: Loan_Quary_form
+#   - active_loop: Loan_Quary_form
+#   - or:
+#     - intent: check_balance 
+#     - intent: weather
+#     - intent: bKash_transfer
+#     - intent: Card_Close
+#     - intent: explain
+#     - intent: EMI_Query
+#   - action: action_ask_continue
+#   - slot_was_set:
+#     - Continue: true
+#   - or:
+#     - intent: affirm
+#     - intent: deny
+#   - action: action_continue_response
+#   - slot_was_set:
+#     - Continue: false
+
+- story: interactive_story Loan_Related_Query, affirm
+  steps:
+  - intent: Loan_Related_Query
+  - action: action_Loan_info
+  - slot_was_set:
+    - Father_Name: null
+  - slot_was_set:
+    - Mother_Name: null
+  - slot_was_set:
+    - Birth_Date: null
+  - slot_was_set:
+    - Card_Last_Number: null
+  - slot_was_set:
+    - Relation_to_Nominee: null
+  - slot_was_set:
+    - Intent_Name: Loan_Related_Query
+  - slot_was_set:
+    - UserInput: লোনের কিস্তির ব্যাপারে জানতে চায়
+  - slot_was_set:
+    - Incomplete_Story: true
+  - action: Loan_Quary_form
+  - active_loop: Loan_Quary_form
+  - slot_was_set:
+    - requested_slot: loan_continue
+  - slot_was_set:
+    - loan_continue: affirm
+  - slot_was_set:
+    - requested_slot: Birth_Date
+  - slot_was_set:
+    - Birth_Date: 01/04/1994
+  - slot_was_set:
+    - Birth_Date: 01/04/1994
+  - slot_was_set:
+    - requested_slot: Relation_to_Nominee
+  - slot_was_set:
+    - Relation_to_Nominee: ভাই
+  - slot_was_set:
+    - Relation_to_Nominee: ভাই
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_Share_Loan_Details
+  - slot_was_set:
+    - Incomplete_Story: false
+  - slot_was_set:
+    - Card_Last_Number: null
+  - slot_was_set:
+    - Relation_to_Nominee: null
+  - slot_was_set:
+    - Intent_Name: null
+  - slot_was_set:
+    - UserInput: null
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+- story: story Account_Address_Update, main story
+  steps:
+  - intent: Account_Address_Update
+  - action: action_Account_Address_Update
+  - action: Address_Update_form
+  - active_loop: Address_Update_form
+  - slot_was_set:
+    - requested_slot: House_and_Road
+  - slot_was_set:
+    - requested_slot: town
+  - slot_was_set:
+    - requested_slot: P_S
+  - slot_was_set:
+    - requested_slot: post_code
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_Account_Address_Update_Done

@@ -999,7 +999,8 @@ class E_Commerce_Request(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict]:
-        print(tracker.latest_message['intent'].get('name'))
+        intent = tracker.latest_message['intent'].get('name')
+        print(intent)
         """Executes the action"""
 
         story_status = tracker.get_slot("Incomplete_Story")
@@ -1013,6 +1014,9 @@ class E_Commerce_Request(Action):
             SlotSet("Father_Name", None),
             SlotSet("Mother_Name", None),
             SlotSet("Birth_Date", None),
+            SlotSet("Card_Last_Number", None),
+            SlotSet("Relation_to_Nominee", None),
+            SlotSet("Intent_Name", intent),
             SlotSet("Incomplete_Story", True),
         ]
 
@@ -1079,11 +1083,11 @@ class ActionCardActivation(Action):
                 ]
 
 class ActionOKey(Action):
-    """action_OK"""
+    """action_OK_eCommerce"""
 
     def name(self) -> Text:
         """Unique identifier of the action"""
-        return "action_OK"
+        return "action_OK_eCommerce"
 
     async def run(
         self,
@@ -1093,8 +1097,30 @@ class ActionOKey(Action):
     ) -> List[Dict]:
     
         """Executes the action"""
-        dispatcher.utter_message(response="utter_E_Commerce_Request")
-        return [SlotSet("Incomplete_Story", False), Form(None), SlotSet("requested_slot", None)]
+        user_intention = story_status = tracker.get_slot("Intent_Name")
+        print(f"User intention is {user_intention}")
+
+        if user_intention == "TPIN_Generation":
+            dispatcher.utter_message(response = "utter_TPIN_Generation")
+            print(f"Hi, I am here.")
+            return [
+            SlotSet("Incomplete_Story", False),
+            SlotSet("Card_Last_Number", None),
+            SlotSet("Relation_to_Nominee", None),
+            SlotSet("Intent_Name", None),
+            Form(None),
+            SlotSet("requested_slot", None),
+            ]
+        else:
+            dispatcher.utter_message(response="utter_E_Commerce_Request")
+            return [
+                SlotSet("Incomplete_Story", False),
+                SlotSet("Card_Last_Number", None),
+                SlotSet("Relation_to_Nominee", None),
+                SlotSet("Intent_Name", None),
+                Form(None),
+                SlotSet("requested_slot", None),
+                ]
     
 class ActionCloseCard(Action):
     """action_card_close_done"""
@@ -1141,19 +1167,21 @@ class ActionGreet(Action):
         """Executes the action"""
         currentTime = datetime.datetime.now()
         currentTime.hour
-
+        Bank_list = ['ব্রাক ব্যাংক', 'সিটি ব্যাংক', 'ইবিএল', 'স্ট্যান্ডার্ড চার্টার্ড ব্যাংক', 'ব্যাংক এশিয়া']
+        Bank_Name = Bank_list[3]
+        print(f'Bank Name is {Bank_Name}')
         if 3<= currentTime.hour < 12:
            print('Good morning.')
-           dispatcher.utter_message(response="utter_greet_morning")
+           dispatcher.utter_message(response="utter_greet_morning", Bank_Name = Bank_list[0])
         elif 12 <= currentTime.hour < 17:
             print('Good afternoon.')
-            dispatcher.utter_message(response="utter_greet_afternoon")
+            dispatcher.utter_message(response="utter_greet_afternoon", Bank_Name = Bank_list[0])
         elif 17 <= currentTime.hour < 19:
             print('Good evening.')
-            dispatcher.utter_message(response="utter_greet_evening")
+            dispatcher.utter_message(response="utter_greet_evening", Bank_Name = Bank_list[0])
         elif 19 <= currentTime.hour < 3:
             print('Good night.')
-            dispatcher.utter_message(response="utter_greet_night")
+            dispatcher.utter_message(response="utter_greet_night", Bank_Name = Bank_list[0])
         else:
             print('Good unknown time.')
             dispatcher.utter_message(response="utter_greet")
@@ -1366,7 +1394,15 @@ class ActionValidationbKash(FormValidationAction):
             dispatcher.utter_message(response="utter_invalidphone")
             return {"amount-of-money": None, "requested_slot": "phone_number"}
         # account_balance = profile_db.get_account_balance(tracker.sender_id)
-
+        Amount_in_Word = ''
+        if "." in amount:
+            List = amount.split(".")
+            print(List)
+            Amount_in_Word += amount_in_word(List[0]) + " টাকা " + amount_in_word(List[1]) + " পয়সা "
+            print(Amount_in_Word)
+            amountBengaliWord = Amount_in_Word
+            print(f"amount is {amountBengaliWord}")
+            return {"amount-of-money": amount, "amountBengaliWord": amountBengaliWord, "requested_slot": "amount_confirm"}
         number = None
         #BANGLA Check Here
         if(not is_ascii(amount)):  #If Bangla then enter here
@@ -1376,6 +1412,7 @@ class ActionValidationbKash(FormValidationAction):
                 amount = str(number)
                 print("Number : ", number)
                 print(amount)
+
                 if(int(amount)<=0):
                     dispatcher.utter_message(response="utter_invalidAMOUNT")
                     # print("1")
@@ -2538,7 +2575,15 @@ class ActionValidationChequeCancel(FormValidationAction):
             return {"amount-of-money": None, "requested_slot": "cheque_number"}
 
         # account_balance = profile_db.get_account_balance(tracker.sender_id)
-
+        Amount_in_Word = ''
+        if "." in amount:
+            List = amount.split(".")
+            print(List)
+            Amount_in_Word += amount_in_word(List[0]) + " টাকা " + amount_in_word(List[1]) + " পয়সা "
+            print(Amount_in_Word)
+            amountBengaliWord = Amount_in_Word
+            print(f"amount is {amountBengaliWord}")
+            return {"amount-of-money": amount, "amountBengaliWord": amountBengaliWord, "requested_slot": "amount_confirm"}
         number = None
         #BANGLA Check Here
         if(not is_ascii(amount)):  #If Bangla then enter here
@@ -2629,77 +2674,77 @@ class ActionValidationecommerce(FormValidationAction):
         """Unique identifier of the action"""
         return "validate_e_commerce_form"
  
-    async def validate_Father_Name(
-        self,
-        slot_value: Any,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict]:
+    # async def validate_Father_Name(
+    #     self,
+    #     slot_value: Any,
+    #     dispatcher: CollectingDispatcher,
+    #     tracker: Tracker,
+    #     domain: Dict[Text, Any],
+    # ) -> List[Dict]:
     
-        """Executes the action"""
-        print(tracker.latest_message['intent'].get('name'))
-        print(tracker.latest_message['intent']['confidence'])
-        active_loop = tracker.active_loop.get('name')
-        print(f"active loop is, {active_loop}")
-        SLT = tracker.slots.get('name')
-        print(f"the rasa is requesting for {SLT}")
+    #     """Executes the action"""
+    #     print(tracker.latest_message['intent'].get('name'))
+    #     print(tracker.latest_message['intent']['confidence'])
+    #     active_loop = tracker.active_loop.get('name')
+    #     print(f"active loop is, {active_loop}")
+    #     SLT = tracker.slots.get('name')
+    #     print(f"the rasa is requesting for {SLT}")
         
-        print("validate_Father_Name")
-        Name = tracker.get_slot("Father_Name")
-        print("Name is in validate form and it is ", Name)
+    #     print("validate_Father_Name")
+    #     Name = tracker.get_slot("Father_Name")
+    #     print("Name is in validate form and it is ", Name)
 
-        #NAME can't be a number
-        for character in Name:
-            if character.isdigit():
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Father_Name": None}
-        if Name!=None:
-            if (len(Name) < 4):
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Father_Name": None, "requested_slot":"Father_Name"}
-            else:
-                print("Correct Name")
-                return {"Father_Name": Name}
-        else:
-            dispatcher.utter_message(response="utter_invalidNAME")
-            return {"Father_Name": None, "requested_slot":"Father_Name"}
+    #     #NAME can't be a number
+    #     for character in Name:
+    #         if character.isdigit():
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Father_Name": None}
+    #     if Name!=None:
+    #         if (len(Name) < 4):
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Father_Name": None, "requested_slot":"Father_Name"}
+    #         else:
+    #             print("Correct Name")
+    #             return {"Father_Name": Name}
+    #     else:
+    #         dispatcher.utter_message(response="utter_invalidNAME")
+    #         return {"Father_Name": None, "requested_slot":"Father_Name"}
         
-    async def validate_Mother_Name(
-        self,
-        slot_value: Any,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict]:
+    # async def validate_Mother_Name(
+    #     self,
+    #     slot_value: Any,
+    #     dispatcher: CollectingDispatcher,
+    #     tracker: Tracker,
+    #     domain: Dict[Text, Any],
+    # ) -> List[Dict]:
     
-        """Executes the action"""
-        print(tracker.latest_message['intent'].get('name'))
-        print(tracker.latest_message['intent']['confidence'])
-        active_loop = tracker.active_loop.get('name')
-        print(f"active loop is, {active_loop}")
-        SLT = tracker.slots.get('name')
-        print(f"the rasa is requesting for {SLT}")
+    #     """Executes the action"""
+    #     print(tracker.latest_message['intent'].get('name'))
+    #     print(tracker.latest_message['intent']['confidence'])
+    #     active_loop = tracker.active_loop.get('name')
+    #     print(f"active loop is, {active_loop}")
+    #     SLT = tracker.slots.get('name')
+    #     print(f"the rasa is requesting for {SLT}")
         
-        print("validate_Mother_Name")
-        Name = tracker.get_slot("Mother_Name")
-        print("Name is in validate form and it is ",Name)
+    #     print("validate_Mother_Name")
+    #     Name = tracker.get_slot("Mother_Name")
+    #     print("Name is in validate form and it is ",Name)
 
-        #USERNAME can't be a number
-        for character in Name:
-            if character.isdigit():
-                dispatcher.utter_message(response="utter_invalidNAME")
-                return {"Mother_Name": None, "requested_slot":"Mother_Name"}
-        if Name!=None:
-            if (len(Name) < 4):
-                dispatcher.utter_message(response="utter_invalidNAME")
-                # return {"Mother_Name": None}
-                return {"Mother_Name": None, "requested_slot":"Mother_Name"}
-            else:
-                return {"Mother_Name": Name}
-        else:
-            dispatcher.utter_message(response="utter_invalidNAME")
-            return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #     #USERNAME can't be a number
+    #     for character in Name:
+    #         if character.isdigit():
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #     if Name!=None:
+    #         if (len(Name) < 4):
+    #             dispatcher.utter_message(response="utter_invalidNAME")
+    #             # return {"Mother_Name": None}
+    #             return {"Mother_Name": None, "requested_slot":"Mother_Name"}
+    #         else:
+    #             return {"Mother_Name": Name}
+    #     else:
+    #         dispatcher.utter_message(response="utter_invalidNAME")
+    #         return {"Mother_Name": None, "requested_slot":"Mother_Name"}
 
     async def validate_Birth_Date(
         self,
@@ -2741,3 +2786,409 @@ class ActionValidationecommerce(FormValidationAction):
         else:
             dispatcher.utter_message(response="utter_invalidBDATE")
             return {"Birth_Date": None}
+
+    async def validate_Card_Last_Number(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        active_loop = tracker.active_loop.get('name')
+        print(f"active loop is, {active_loop}")
+        
+        print("validate_Card_Last_Number")
+        Card_Last_Digit = tracker.get_slot("Card_Last_Number")
+        print("Card Last Digit: ", Card_Last_Digit)
+
+        if Card_Last_Digit!=None:
+            if (len(Card_Last_Digit) != 3):
+                dispatcher.utter_message(response="utter_invalid_Card_Last_Number")
+                return {"Card_Last_Number": None, "requested_slot":"Card_Last_Number"}
+            else:
+                return {"Card_Last_Number": Card_Last_Digit}
+        else:
+            dispatcher.utter_message(response="utter_invalid_Card_Last_Number")
+            return {"Card_Last_Number": None, "requested_slot":"Card_Last_Number"}
+    
+    async def validate_Relation_to_Nominee(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        print("validate_Relation_to_Nominee")
+        Nominee_Is = tracker.get_slot("Relation_to_Nominee")
+        print("Relation to Nominee: ", Nominee_Is)
+        print("Relation_to_Nominee is INCOMPLETE")
+        return []
+
+
+class ActionLoanQuery(Action):
+    """action_Loan_info"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_Loan_info"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        intent = tracker.latest_message['intent'].get('name')
+        print(intent)
+        Input = tracker.latest_message.get('text')
+        print(f"User Input was:{Input}")
+
+        """Executes the action"""
+
+        story_status = tracker.get_slot("Incomplete_Story")
+        print(f"Story Incomplete: {story_status}")
+
+        if story_status == True:
+            return [UserUtteranceReverted()]
+
+        # dispatcher.utter_message(response="utter_ask_loan_installment")
+        return[
+            SlotSet("Father_Name", None),
+            SlotSet("Mother_Name", None),
+            SlotSet("Birth_Date", None),
+            SlotSet("Card_Last_Number", None),
+            SlotSet("Relation_to_Nominee", None),
+            SlotSet("Intent_Name", intent),
+            SlotSet("UserInput", Input),
+            SlotSet("Incomplete_Story", True),
+        ]
+
+class ActionLoanDetails(Action):
+    """action_Share_Loan_Details"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_Share_Loan_Details"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        """Executes the action"""
+        intent = tracker.latest_message['intent'].get('name')
+        print(intent)
+
+        if intent == "deny":
+            dispatcher.utter_message(response = "utter_AT")
+            return [
+                SlotSet("Incomplete_Story", False),
+                SlotSet("Card_Last_Number", None),
+                SlotSet("Relation_to_Nominee", None),
+                SlotSet("Intent_Name", None),
+                SlotSet("UserInput", None),
+                Form(None),
+                SlotSet("requested_slot", None),
+        ]
+
+        user_text = tracker.get_slot("UserInput")
+        print(f"User intention is {user_text}")
+
+        if user_text != None:
+            if "কিস্তি" in user_text or "কিস্তির" in user_text:
+                dispatcher.utter_message(response = "utter_installment_details")
+            elif "ডিউ" in user_text or "বাকী" in user_text or "অবশিষ্ট" in user_text:
+                dispatcher.utter_message(response = "utter_loan_due")
+            else:
+                # dispatcher.utter_message(response = "utter_loan_info_not_available")
+                dispatcher.utter_message(response = "utter_installment_details")
+
+            return [
+                SlotSet("Incomplete_Story", False),
+                SlotSet("Card_Last_Number", None),
+                SlotSet("Relation_to_Nominee", None),
+                SlotSet("Intent_Name", None),
+                SlotSet("UserInput", None),
+                Form(None),
+                SlotSet("requested_slot", None),
+            ]
+        else:
+            dispatcher.utter_message(response = "utter_ask_whatelse")
+
+class ActionValidationLoan(FormValidationAction):
+    """validate_Loan_Quary_form"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "validate_Loan_Quary_form"
+ 
+    async def validate_loan_continue(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        print("validate_loan_continue")
+        active_loop = tracker.active_loop.get('name')
+        print(f"active loop is, {active_loop}")
+        intent = tracker.latest_message['intent'].get('name')
+        print(intent)
+        
+        loan_continue = tracker.get_slot("loan_continue")
+        print("loan continue value: ", loan_continue)
+
+        if intent == "affirm":
+            print("Got affirm.")
+            return {"loan_continue": intent, "requested_slot":"Birth_Date"}
+        elif intent == "deny":
+            print("Got Deny.")
+            return{"UserInput": None, "loan_continue": None, "Incomplete_Story": False, "requested_slot": None}
+        else:
+            print("Something Else...")
+            # return [UserUtteranceReverted()]
+            # return [FollowupAction("action_ask_continue")]
+            return{"UserInput": None, "loan_continue": None, "Incomplete_Story": False, "requested_slot": None}
+
+
+    async def validate_Birth_Date(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        intent = tracker.latest_message['intent'].get('name')
+        print(intent)
+        print(tracker.latest_message['intent']['confidence'])
+        active_loop = tracker.active_loop.get('name')
+        
+        
+        print("validate_Birth_Date")
+        Bdate = tracker.get_slot("Birth_Date")
+        print("Name is in validate form and it is ", Bdate)
+
+        newDate = Bdate.split("/")
+        if len(newDate) < 2:
+            return {"Birth_Date": "01/02/1990"}
+        day = newDate[0]
+        month = newDate[1]
+        year = newDate[2]
+
+        print(type(day))
+
+        print(newDate)
+        print(f"Day: {day}, month: {month}, year: {year}")
+        month = int(month)
+        if Bdate!=None:
+            if month in range(1, 13):
+                return {"Birth_Date": Bdate}
+            else:
+                dispatcher.utter_message(response="utter_invalidBDATE")
+                return {"Birth_Date": None}
+        else:
+            dispatcher.utter_message(response="utter_invalidBDATE")
+            return {"Birth_Date": None}
+
+    
+    async def validate_Relation_to_Nominee(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        print("validate_Relation_to_Nominee")
+        Nominee_Is = tracker.get_slot("Relation_to_Nominee")
+        print("Relation to Nominee: ", Nominee_Is)
+        print("Relation_to_Nominee is INCOMPLETE")
+        return []
+
+class Account_Address_Update(Action):
+    """action_Account_Address_Update"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_Account_Address_Update"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        intent = tracker.latest_message['intent'].get('name')
+        print(intent)
+        """Executes the action"""
+
+        story_status = tracker.get_slot("Incomplete_Story")
+        print(f"Story Incomplete: {story_status}")
+
+        if story_status == True:
+            return [UserUtteranceReverted()]
+        else:
+            return[
+                SlotSet("House", None),
+                SlotSet("Road", None),
+                SlotSet("town", None),
+                SlotSet("P_S", None),
+                SlotSet("post_code", None),
+                SlotSet("Incomplete_Story", True),
+            ]
+
+class ActionValidationAddressUpdate(FormValidationAction):
+    """validate_Address_Update_form"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "validate_Address_Update_form"
+ 
+    async def validate_House(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        print("validate_House")
+                
+        H_R_value = tracker.get_slot("House")
+        print("House Number: ", H_R_value)
+
+        if H_R_value != None:
+            print("Have Values.")
+            return {"House": H_R_value, "requested_slot":"Road"}
+        else:
+            print("Invalid Value.")
+            return {"House": None, "requested_slot":"House"}
+    
+    async def validate_Road(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        print("validate_Road")
+                
+        road = tracker.get_slot("Road")
+        print("Road Number: ", road)
+
+        if road != None:
+            print("Have Values.")
+            return {"Road": road, "requested_slot":"town"}
+        else:
+            print("Invalid Value.")
+            return {"Road": None, "requested_slot":"Road"}
+
+
+    async def validate_town(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        # intent = tracker.latest_message['intent'].get('name')
+        # print(intent)
+        # print(tracker.latest_message['intent']['confidence'])
+        # active_loop = tracker.active_loop.get('name')
+        
+        
+        print("validate_town and city")
+        townANDcity = tracker.get_slot("town")
+        print("Place name is ", townANDcity)
+
+        if townANDcity != None:
+            if townANDcity.isdigit():
+                print("Wrong City Name.")
+                dispatcher.utter_message(response="utter_invalid_town")
+                return {"town": None}
+            return {"town": townANDcity, "requested_slot":"P_S"}
+        else:
+            dispatcher.utter_message(response="utter_invalid_town")
+            return {"town": None}
+
+    
+    async def validate_P_S(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        print("validate_Police_Station")
+        policeStation = tracker.get_slot("P_S")
+        print(f"Police Station is: {policeStation}")
+        
+        if policeStation != None:
+            if policeStation.isdigit():
+                print("Wrong policeStation Name.")
+                dispatcher.utter_message(response="utter_invalid_information")
+                return {"P_S": None}
+            return {"P_S": policeStation, "requested_slot":"post_code"}
+        else:
+            dispatcher.utter_message(response="utter_invalid_information")
+            return {"P_S": None}
+    
+    async def validate_post_code(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+    
+        """Executes the action"""
+        print("validate_post_code")
+        postCODE = tracker.get_slot("post_code")
+        length = len(postCODE)
+        print(f"Post Code is: {postCODE}")
+        if length == 5:
+            return {"post_code": postCODE[1:], "requested_slot": None}
+        else:
+            dispatcher.utter_message(response="utter_invalid_information")
+            return {"P_S": None, "requested_slot": "post_code"}
+
+class Account_Address_Update_Done(Action):
+    """action_Account_Address_Update_Done"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+        return "action_Account_Address_Update_Done"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        dispatcher.utter_message(response="utter_Account_updated_info_stored")
+        return[
+            SlotSet("House", None),
+            SlotSet("Road", None),
+            SlotSet("town", None),
+            SlotSet("P_S", None),
+            SlotSet("post_code", None),
+            SlotSet("Incomplete_Story", False),
+        ]

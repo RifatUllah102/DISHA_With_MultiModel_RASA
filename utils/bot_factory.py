@@ -12,7 +12,7 @@ DEFAULT_LANG = 'bn'
 
 SUPPORTED_LANGS = {
   #DEFAULT_LANG: 'english',
-   'bn': 'Bangla',
+   'bn': 'Bangla'
 }
 
 

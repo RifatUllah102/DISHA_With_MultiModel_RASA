@@ -5,6 +5,7 @@ def spell_to_int(spell):
     positional= ['কোটি','লক্ষ','হাজার','শত','লাখ']
     positional_dict={'শত':2,'হাজার':3,'লক্ষ':5,'কোটি':7, 'লাখ':5}
     hundreds=['একশ','দুইশ','তিনশ','চারশ','পাঁচশ','ছয়শ','সাতশ','আটশ','নয়শ','দশশ','এগারশো','বারোশো','তেরোশো','চদ্দশো','পনেরোশো','ষোলশো','সতেরোশো','আঠারশো','উনিশশো']
+    hundreds_synonyms=[['একশ'],['দুইশ'],['তিনশ'],['চারশ'],['পাঁচশ'],['ছয়শ'],['সাতশ'],['আটশ'],['নয়শ'],['দশশ'],['এগারশো'],['বাবোশো','বারোশো'],['তেরোশো'],['চদ্দশো'],['পনেরোশো'],['ষোলশো'],['সতেরোশো'],['আঠারশো'],['উনিশশো']]
     bn_num_dict={}
     all_kWords=[]
     all_kWords.extend(positional)
@@ -17,7 +18,6 @@ def spell_to_int(spell):
     hundreds_dict={}
     for i in range(len(hundreds)):
         hundreds_dict[hundreds[i]]=(i+1)*100
-
     
     input_string = spell.split()
     input_spelling = []
@@ -35,20 +35,37 @@ def spell_to_int(spell):
             if input_spelling[i] in bn_num:
                 num=bn_num_dict[input_spelling[i]]
             else :
-                num=hundreds_dict[input_spelling[i]]
+                if input_spelling[i] in hundreds_dict:
+                    num=hundreds_dict[input_spelling[i]]
+                else:
+                    for ii in range(len(hundreds_synonyms)):
+                        if input_spelling[i] in hundreds_synonyms[ii]:
+                            num=(ii+1)*100 
         else:
             if input_spelling[i] in positional and i!=len(input_spelling)-1:
                 num+=bn_num_dict[input_spelling[i-1]]*10**positional_dict[input_spelling[i]]
             if input_spelling[i] in hundreds and i!=len(input_spelling)-1:
-                num+=hundreds_dict[input_spelling[i]]
+                if input_spelling[i] in hundreds_dict:
+                    num+=hundreds_dict[input_spelling[i]]
+                else:
+                    for ii in range(len(hundreds_synonyms)):
+                        if input_spelling[i] in hundreds_synonyms[ii]:
+                            num+=(ii+1)*100
+                    
             if i==len(input_spelling)-1 and input_spelling[i] not in positional:
                 if input_spelling[i] in bn_num:
                     num+=bn_num_dict[input_spelling[i]]
                 else :
-                    num+=hundreds_dict[input_spelling[i]]
+                    if input_spelling[i] in hundreds_dict:
+                        num+=hundreds_dict[input_spelling[i]]
+                    else:
+                        for ii in range(len(hundreds_synonyms)):
+                            if input_spelling[i] in hundreds_synonyms[ii]:
+                                num+=(ii+1)*100
             if input_spelling[i] in positional and i==len(input_spelling)-1:
-                num+=bn_num_dict[input_spelling[i-1]]
-                num=num*10**positional_dict[input_spelling[i]]
+                if input_spelling[i-1] in bn_num_dict:
+                	num+=bn_num_dict[input_spelling[i-1]]
+                	num=num*10**positional_dict[input_spelling[i]]
             # else:
             #     num = num*10**positional_dict[input_spelling[i]]
     return str(num)

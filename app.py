@@ -26,6 +26,9 @@ ASK_PHONE ='আপনার এগার সংখ্যার ফোন না�
 ASK_MONEY='টাকার পরিমাণ বলুন'
 ASK_OK='ঠিক আছে'
 ASK_CARD = 'আপনার দশ ডিজিট এর কার্ড নাম্বার বলুন'
+ASK_HOME = 'স্যার, আপনার হাউজ নাম্বার, বলুন'
+ASK_ROAD = 'স্যার, আপনার রোড নাম্বার, বলুন'
+ASK_POST_CODE = 'আপনার, পোস্টাল কোড বলুন'
 
 PHONE_BOOK={
     "102": "মিসটার  শাহাদাত",
@@ -108,6 +111,9 @@ resposnse_text=['s']
 resposnse_text_dict={
     "s": ['s']
 }
+resposnse_text_dict_web={
+    "default": ['s']
+}
 fallback_counter={}
 fallback_response=['আমি আপনার বার্তা টা বুঝতে পারি নি। আপনি কি অন্যভাবে বলতে পারবেন প্লিজ?','স্যার, কী ওয়ার্ড ব্যাবহার করলে আপনাকে সাহায্য করতে আমার জন্য সহজ হবে।','কথাটি বুঝতে পারিনি। দয়া করে পুনরায় বলুন','দুঃখিত আপনার কথাটি শুনতে পায়নি','পুনরায় বলবেন প্লিজ?','আপনার কথাটি বুঝতে পারিনি। পুনরায় বলুন','আপনি প্রাসঙ্গিক কিছু বলুন']
 async def webhook(request):
@@ -159,6 +165,12 @@ async def webhook(request):
         data['message']=number_string
              
     string_to_num=num_to_int.spell_to_int(data['message'])
+    tt=data['message'].split()
+    if('পয়সা' in tt):
+        ind=tt.index('পয়সা')
+        float_num=num_to_int.spell_to_int(tt[ind-1])
+        string_to_num=str(string_to_num)+'.'+float_num
+        
     data['message']=string_to_num
     #for dollar rate manupulation
     if('রেট' in data['message'] or 'ডলার' in data['message'] or 'এক্সচেঞ্জ' in data['message']):
@@ -174,6 +186,11 @@ async def webhook(request):
     #     data['message']=ASK_OK
 
 
+    # load manupulation
+    if(resposnse_text_dict[data['sender']][-1]=='আপনি কি লোন ডিউ, কত টাকা বাকি আছে বা পরবর্তী কিস্তি কত দিবেন তা জানতে চাচ্ছেন।'):
+    	print('changed text')
+    	data['message']='ঠিক আছে'
+
     #for PIN manupulation
     if(resposnse_text_dict[data['sender']][-1]=='আপনার চার ডিজিটের টি পিন নাম্বার বলুন' or resposnse_text_dict[data['sender']][-1]=='আপনার টি পিন নম্বরটি বলুন' or resposnse_text_dict[data['sender']][-1]=='স্যার, আপনার চার ডিজিটের টি পিন নম্বরটি বলুন' or resposnse_text_dict[data['sender']][-1]=='ভুল পিন নাম্বার। দয়া করে পুনরায় পিন নাম্বার বলুন'):
         print('changed text')
@@ -183,6 +200,15 @@ async def webhook(request):
                 data['message']=data['message'][:4]
             data['message']=data['message']+' পিন'
 
+    if(resposnse_text_dict[data['sender']][-1]==ASK_HOME):
+    	print('changed text')
+    	data['message']='H'+data['message']
+    if(resposnse_text_dict[data['sender']][-1]==ASK_ROAD):
+    	print('changed text')
+    	data['message']='R'+data['message']
+    if(resposnse_text_dict[data['sender']][-1]==ASK_POST_CODE):
+    	print('changed text')
+    	data['message']='A'+data['message']
     if(resposnse_text_dict[data['sender']][-1]==ASK_PHONE):
         print('changed text')
         if(len(data['message'])>11):
@@ -293,7 +319,7 @@ async def webhook(request):
                 a_dictionary['text']='আপনার কল টি এক জন কাস্টমার কেয়ার প্রতিনিধির কাছে ট্রান্সফার করা হচ্ছে'
                 resposnse_text_dict[data['sender']]=['s']
                 fallback_counter[data['sender']]=0
-            elif(resposnse_text_dict[data['sender']][-1]=='আপনার কল টি এক জন কাস্টমার কেয়ার প্রতিনিধির কাছে ট্রান্সফার করা হচ্ছে' or resposnse_text_dict[data['sender']][-1]=='আপনার কল টি একজন প্রতিনিধির কাছে পাঠানো হচ্ছে, একটু অপেক্ষা করুন' or resposnse_text_dict[data['sender']][-1]=='আপনার কল টি একজন প্রতিনিধির কাছে ট্রান্সফার হচ্ছে, একটু অপেক্ষা করুন'):
+            elif(resposnse_text_dict[data['sender']][-1]=='দুঃখিত, আমি আপনাকে এই মুহূর্তে কোন ধরনের সহায়তা করতে পারছি না। আমি কল টি এক জন কাস্টমার কেয়ার প্রতিনিধির কাছে ট্রান্সফার করছি, একটু অপেক্ষা করুন।' or resposnse_text_dict[data['sender']][-1]=='আপনার কল টি এক জন কাস্টমার কেয়ার প্রতিনিধির কাছে ট্রান্সফার করা হচ্ছে' or resposnse_text_dict[data['sender']][-1]=='আপনার কল টি একজন প্রতিনিধির কাছে পাঠানো হচ্ছে, একটু অপেক্ষা করুন' or resposnse_text_dict[data['sender']][-1]=='আপনার কল টি একজন প্রতিনিধির কাছে ট্রান্সফার হচ্ছে, একটু অপেক্ষা করুন'):
                 a_dictionary['cause_code']='231'
                 resposnse_text_dict[data['sender']]=['s']
                 fallback_counter[data['sender']]=0
@@ -340,13 +366,19 @@ async def on_session_request(sid, data):
         data['session_id'] = uuid.uuid4().hex
     await sio.emit('session_confirm', data['session_id'])
 
+
+def isascii(s):
+    """Check if the characters in string s are in ASCII, U+0-U+7F."""
+    return len(s) == len(s.encode())
+    
 @sio.on('user_uttered')
 async def on_user_uttered(sid, message):
+    print("SID: ")
     print(sid)
     custom_data = message.get('customData', {})
     lang = custom_data.get('lang', 'en')
     campaign = custom_data.get('campaign', False)
-    print('lang: '+lang)
+
     print('campaign: '+str(campaign))
     
     
@@ -362,13 +394,47 @@ async def on_user_uttered(sid, message):
         user_message=number_string
         
         
-    print("new user message")
+    print("user message")
     print(user_message)                                
                                            
+    
+    global resposnse_text_dict_web
+    
+    #lang='be'
+    lang='bn'
+    #isalpha()
+    #if isascii(user_message):
+    #	lang='be'
 
+
+    print('lang: '+lang)
+    if(user_message=="ha" or user_message=="haa" or user_message=="হ্যাঁ" or user_message=="হ্যা"):
+    	user_message='yes'
+    	
+    numbers = {'০': '0','১': '1','২': '2','৩': '3','৪': '4','৫': '5','৬': '6','৭': '7','৮': '8','৯': '9'}
+    output=[]
+    for i in user_message:
+    	if(i in numbers):
+    		output.append(numbers[i])
+    
+    if(len(output)>0):
+    	user_message=''.join(output)
+    	
+    print('New user message')
+    print(user_message)
+    
+    #for PIN manupulation
+    if(resposnse_text_dict_web['default'][-1]=='আপনার চার ডিজিটের টি পিন নাম্বার বলুন' or resposnse_text_dict_web['default'][-1]=='আপনার টি পিন নম্বরটি বলুন' or resposnse_text_dict_web['default'][-1]=='স্যার, আপনার চার ডিজিটের টি পিন নম্বরটি বলুন' or resposnse_text_dict_web['default'][-1]=='ভুল পিন নাম্বার। দয়া করে পুনরায় পিন নাম্বার বলুন'):
+        print('changed text')
+        user_message=user_message+' পিন'
+        
+        
+
+    
     bot_responses = await bots[lang].handle_text(user_message,None,None,sid) #await BotFactory.getOrCreate(lang).handle_text(user_message)
     print("Response:")
     print(bot_responses)
+    resposnse_text_dict_web['default'].append(bot_responses[0]['text'])
     
     tracker = bots[lang].tracker_store.get_or_create_tracker(sid)
     state = tracker.current_state()

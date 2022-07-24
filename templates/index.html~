@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chat Bot</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-image: url('https://vaprod.gplex.com/public/assets/app/media/img/bg/bg-3.jpg');">
+<div>
+	<div class="">
+		<a href="#">
+                    <img src="https://vaprod.gplex.com/public/assets/demo/default/media/img/logo/logo.png">
+                </a>
+	</div>            
+</div>
+<div id="webchat">
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://">
+  <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+     (e.src =
+      "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+       (e.async = !0),
+       (e.onload = () => {
+         window.WebChat.default(
+          { 
+             selector: "#webchat",
+            initPayload: "/greet",
+      customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to  the socket
+       socketUrl: "http://58.65.224.5:5566",
+       socketPath: "/socket.io/",
+       title: "Chat Bot",
+       tooltipPayload: "/greet",
+       tooltip: true,    
+       tooltipDelay: 500,
+       subtitle: "Powered by gPlex",
+       connectingText: "Waiting for server...",
+       profileAvatar: "http://58.65.224.5:5566/static/images/avatar.png",
+       openLauncherImage: "https://",
+
+       params: {"storage": "session"}, 
+  
+      mainColor: "#0F52BA",
+      userBackgroundColor: "#0F52BA",
+      userTextColor: "#cde9ce",
+      showMessageDate: false,
+      inputTextFieldHint: "এখানে আপনার বার্তা টাইপ করুন...",
+      badge: " ",
+      onSocketEvent:{
+            'sendMessage': function(e) {console.log(e.text)},
+	    'bot_uttered': function(e) {console.log(e.text)},
+	    'connect': function() {console.log('connection established')},
+	    'disconnect': function() {doSomeCleanup()},
+	  },
+      displayUnreadCount: true,
+      isChatOpen: false,
+      embedded: false,
+      showCloseButton: true,
+      fullScreenMode: true,
+      showFullScreenButton: true,
+      docViewer: false,
+      },
+       null
+    );
+   }),
+   t.insertBefore(e, t.firstChild);
+  })();
+ </script>
+ </body>
+</html>

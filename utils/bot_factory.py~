@@ -13,6 +13,8 @@ DEFAULT_LANG = 'bn'
 SUPPORTED_LANGS = {
   #DEFAULT_LANG: 'english',
    'bn': 'Bangla',
+   'be': 'Banglish',
+   'en': 'English',
 }
 
 
@@ -55,7 +57,7 @@ class BotFactory:
 
   def __get_model(self, lang):
     app_dir = os.getenv('APP_DIR')
-    app_dir = "/home/financial_demo_multi_language"
+    app_dir = "/home/disha"
     return '{}/models/chat-model-{}.tar.gz'.format(app_dir, lang)
 
   @staticmethod
